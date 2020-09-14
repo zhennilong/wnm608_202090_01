@@ -1,0 +1,65 @@
+body{
+    background-color:#E1EAF5;
+    font: #2F4C75;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.1{
+    text-align:center;
+}
+
+h1{
+    color: #4371A8;
+}
+
+h3{
+    color: #4371A8;
+    text-decoration: underline;
+}
+
+h4{
+    line-height: 0.1;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav{
+    background-color: #4371A8;
+}
+
+.topnav li{
+    list-style: none;
+    display: inline;  
+}
+
+.topnav a{
+    text-decoration: none;
+    color: white;
+    padding: 14px 30px;
+}
+
+.Omurice{
+    width: 600px;
+}
+
+.friedvegtables{
+    width: 600px;
+}
+
+.friedrice{
+    width: 600px;
+}
+
+
+ul{
+    line-height: 1.8;
+}
+
