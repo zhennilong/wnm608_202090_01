@@ -7,22 +7,38 @@ body{
     justify-content: center;
 }
 
-.1{
-    text-align:center;
+.image_rice {
+    text-align: center;
+   
 }
+
+.image_omelet {
+    text-align: center;
+}
+
+
+.image_veg {
+    text-align: center;
+}
+
 
 h1{
     color: #4371A8;
+
+}
+
+h2 {
+  color: #4371A8;  
+   text-align: center;
 }
 
 h3{
     color: #4371A8;
     text-decoration: underline;
+     text-align: center;
 }
 
-h4{
-    line-height: 0.1;
-}
+
 
 .header {
     display: flex;
