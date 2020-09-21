@@ -1,0 +1,92 @@
+*, *::before, *::after {
+	box-sizing:border-box;
+
+
+}
+
+:root {}\
+--color-neutral-light: #eee;
+--;
+
+body {
+	margin: 0;
+	font-size: 100%;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Cambria, Georgia, "Times New Roman", serif;
+}
+
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* layout Classes */
+.container {
+	max-width:1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.hidden {display:none;}
+
+.display-flex {
+	display: flex;
+}
+
+.display-block {display:block;}
+.display-inline-flex {display: inline-flex;}
+.display-inline-block { display:inline-block; }
+
+.flex-stretch (flex: 1 1 auto;)
+.flex-none {flex:none;}
+
+.flex-align-center {align-items: center;}
+.flex-justify-center {justify-content: center;}
+
+/*component classes*/
+
+.nav ul {
+	list-style-type: none;
+
+}
+
+.navbar {
+	background-color: var(color-neutral-dark);
+
+
+}
+
+
+.nav h1 {
+	margin: 0;
+	font-size: 1em;
+
+
+.navbar a{
+	padding:0 0.5em;
+	}
+
+.view-window {
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+
+
