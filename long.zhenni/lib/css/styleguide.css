@@ -36,6 +36,7 @@ h6 {
 
 h2 {
 	font-family: 'Ubuntu', sans-serif;
+ 
 }
 
 a {
@@ -61,7 +62,12 @@ a:hover {
 
 
 
-.display-flex { display:flex; }
+.display-flex {     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
 .display-block { display:block; }
 .display-inline-flex { display:inline-flex; }
 .display-inline-block { display:inline-block; }
@@ -71,6 +77,9 @@ a:hover {
 
 .flex-align-center { align-items:center; }
 .flex-justify-center { justify-content:center; }
+.display{ display: flex;
+   flex-direction: row;
+ }
 
 
 
@@ -90,14 +99,17 @@ a:hover {
 
 .navbar {
    background-color:white;
-   color:var(--color-neutral-dark);
+   color:#35BDF2;
    line-height:var(--header-height);
 }
 .navbar h1 {
-   font-size:1em;
-   font-family:Helvetica, Arial, sans-serif;
+   font-size:1.8em;
+   font-family: 'Josefin Sans', sans-serif;
    margin:0;
+   padding-left: 45vw;
 }
+
+
 .navbar a {
    padding:0 0.5em;
 }
@@ -130,13 +142,42 @@ a:hover {
    background-size:cover;
    background-position:center;
    background-attachment:fixed;
+   height:80vh;
+}
 
-   height:60vh;
+
+.view-window h2 {
+   color: white;
+   text-align: center;
+   font-family: 'Josefin Sans', sans-serif;
+   font-weight: 700;
+   font-size: 1.8em;
+   letter-spacing: 0.2em;
 }
 
 
 
+.largewords {
+   color: white;
+   text-align: center;
+   font-family: 'Josefin Sans', sans-serif; 
+   font-weight: 100;
+} 
 
+
+
+.view-window p {
+   font-size: 4em;
+}
+
+.container .card {
+   max-width: 400px;
+   background-color: #CAEAF7;
+   color: black;
+   margin:50px;
+   text-align: center;
+
+    }
 
 .card {
    background-color:var(--color-white);
@@ -157,10 +198,11 @@ a:hover {
       border:2px solid var(--color-neutral-medium);
    }
 
-   .card.dark {
+  /* .card.dark {
       background-color:var(--color-neutral-dark);
       color:var(--color-white);
-   }
+   }*/
+
    .card.medium {
       background-color:var(--color-neutral-medium);
    }
