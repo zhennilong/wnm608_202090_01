@@ -1,6 +1,6 @@
  :root {
-   --color-neutral-light:#f0ecec;
-   --color-neutral-medium:#9e8d8d;
+   --color-neutral-light: white;
+   --color-neutral-medium:#35BDF2;
    --color-neutral-dark:#392f2f;
 }
 
@@ -23,3 +23,61 @@ body {
     color: white;
     font-size: 3em;
 }
+
+
+.display-flex {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.meet-echo {
+  margin: auto;
+}
+
+.article1{
+      display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #35BDF2;
+    background-color: #0F1640;
+    padding: 50px;
+}
+
+.article-card01{
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  line-height: 2;
+}
+
+.view-window h2 {
+   color: white;
+   text-align: center;
+   font-family: 'Josefin Sans', sans-serif;
+   font-weight: 700;
+   font-size: 1.8em;
+   letter-spacing: 0.2em;
+}
+
+
+.largewords {
+   color: white;
+   text-align: center;
+   font-family: 'Josefin Sans', sans-serif; 
+   font-weight: 100;
+} 
+
+.view-window p {
+   font-size: 4em;
+}
+
+.container .card {
+   max-width: 400px;
+   background-color: #CAEAF7;
+   color: black;
+   margin:50px;
+   text-align: center;
+    }
+
