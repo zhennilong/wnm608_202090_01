@@ -48,7 +48,7 @@ body {
 
 [class*='col-']>.card {
   height:100%;
-  margin: 0;
+  margin: auto;
 }
 
 [class*='col-']>.well {
