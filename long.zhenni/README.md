@@ -5,7 +5,7 @@
  
 - http://zhennilong.com/aau/wnm608/long.zhenni/landingpage.html
 
-- http://zhennilong.com/aau/wnm608/long.zhenni/styleguide/index.html
+- http://zhennilong.com/aau/wnm608/long.zhenni/styleguide/styleguide.html
 
 
 
