@@ -7,12 +7,17 @@
 
 
 :root {
-   --color-neutral-light: white;
+   --color-neutral-light: #F5F9FF;
    --color-neutral-medium:#35BDF2;
    --color-neutral-dark:#392f2f;
 
    --color-white:#fff;
    --color-black:#000;
+   --color-blue: #7BA4DB;
+   --color-yellow: #F4DA40;
+   --color-green: #85B09A;
+   --color-orange: #FF6A39;
+   --color-purple: #7566A0;
    --header-height:3rem;
 }
 
@@ -20,20 +25,20 @@
 body {
    margin:0;
    font-size:100%;
-   font-family:roboto, sans-serif;}
+   font-family: 'Nunito', sans-serif;
+   font-weight: 400;
 
+}
+  
 
 h1,
+h2,
 h3,
 h4,
 h5,
 h6 {
-   font-family:roboto, sans-serif;}
+   font-family:'Ubuntu', sans-serif;}
 
-
-h2 {
-	font-family: 'Ubuntu', sans-serif;
-}
 
 
 a {text-decoration: none;
@@ -41,8 +46,21 @@ a {text-decoration: none;
    color:inherit;}
 
 a:hover {
-   text-decoration: underline;
+   text-decoration: none;
 }
+
+
+/*p::first-letter {
+   margin-left: 2em;
+}*/
+
+
+code {
+   white-space: pre-wrap;
+   display: block;
+}
+
+
 
 /* Layout Classes */
 .container {
@@ -53,10 +71,7 @@ a:hover {
 .hidden { display:none; }
 
 
-.display-flex {     
-    display: flex;
- }
-
+.display-flex { display: flex;}
 .display-block { display:block; }
 .display-inline-flex { display:inline-flex; }
 .display-inline-block { display:inline-block; }
@@ -66,9 +81,7 @@ a:hover {
 
 .flex-align-center { align-items:center; }
 .flex-justify-center { justify-content:center; }
-.display{ display: flex;
-   flex-direction: row;
- }
+
 
 
 /* Component Classes */
@@ -79,15 +92,60 @@ a:hover {
    padding-left:0;}
 
 
+
+.nav a {
+   display:block;
+   padding: 0.2em 0.5em;
+}
+
+.nav a:hover {
+
+   text-decoration: underline;
+   line-height: 25px;
+   color: var(--color-blue);
+}
+
+.nav.crumbs ul,
+.nav.pills ul,
+.nav.stretch ul,
+.nav.flex ul {
+   display:flex;
+   justify-content: space-around;
+}
+
+.nav.stretch li {
+      flex: 1 1 auto;
+      text-align:center;
+   }
+
+.nav.pills a {
+      border-radius:2em;
+      padding:0.5em 1em;
+   }
+
+
+.nav.crumbs a {
+      display:inline-block;
+   }
+.nav.crumbs a:hover {
+      background-color:transparent;
+      color:inherit;
+      text-decoration:underline;
+   }
+.nav.crumbs li:not(:first-child)::before {
+      content:'â†’';
+      font-family:arial;
+   }
+
 .navbar {
    background-color:var(--color-white);
-   color:var(--color-neutral-medium);
+   color:var(--color-blue);
    line-height:var(--header-height);
 }
 
 .navbar h1 {
    font-size:1.8em;
-   font-family: 'Josefin Sans', sans-serif;
+   font-family: 'Ubuntu', sans-serif;
    margin:0;
 }
 
@@ -116,10 +174,21 @@ a:hover {
    overflow:hidden;
 }
 
+   .card.round {
+    border-radius: 7000em;
+    min-height: 250px;
+    width: 250px;
+    /* padding: 5em; */
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+    /* border: solid 0.01rem #C2CFE1; */
+    background-color: #F5F9FF;
+   }
 
    .card.soft {
-      border-radius:0.5em;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 0.5em;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+    /* border: solid 0.01rem #C2CFE1; */
+    background-color: #F5F9FF;
    }
 
 
@@ -129,10 +198,11 @@ a:hover {
    }
 
 
-  /* .card.dark {
+
+ .card.dark {
       background-color:var(--color-neutral-dark);
       color:var(--color-white);
-   }*/
+   }
 
 
    .card.medium {
@@ -147,10 +217,46 @@ a:hover {
 
    .well {
     padding: 0.5em;
-    background-color: var(--color-neutral-light);
+    /*background-color: var(--color-neutral-light);*/
     margin: 1px;
+    text-align: center;
 }
 
 .well .well {
+    background-color: var(--color-neutral-light);
+}
+
+ .well-body {
+    padding: 0.5em;
+    /*background-color: var(--color-neutral-light);*/
+    margin: 1px;
     background-color: var(--color-white);
+}
+
+.blue-button {
+    background-color: var(--color-blue);
+    border-radius: 50px;
+    padding: 10px 80px;
+    color: var(--color-white);
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1em;
+}
+
+.button {
+  margin: 30px;
+}
+
+
+.grid .well {
+   background-color: var(--color-white);
+}
+
+.square-button {
+    border: solid 1px var(--color-blue);
+    border-radius: 50px;
+    background-color: var(--color-neutral-light);
+    padding: 10px 50px;
+    margin: 10px;
+
 }

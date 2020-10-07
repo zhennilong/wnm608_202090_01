@@ -10,14 +10,15 @@
 
    <link rel="stylesheet" href="lib/css/styleguide.css">
    <link rel="stylesheet" href="lib/css/gridsystem.css">
-   <link rel="stylesheet" href="css/storetheme.css">
+   <link rel="stylesheet" href="lib/css/storetheme.css">
+   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 
    <header class="navbar">
       <div class="container display-flex flex-align-center">
-         <div class="flex-none"><h1>Styleguide</h1></div>
+         <div class="flex-none"><h1>STYLEGUIDE</h1></div>
       </div>
    </header>
 
@@ -42,7 +43,9 @@
       <h2>Typography</h2>
       <div class="card soft">
 
-         <h3>Headings</h3>
+         <h3>Headings -- Font: Ubuntu</h3>
+         <h3 class="bodyfont">Body -- Font: Nunito</h3>
+         <hr>
 
 
          <h4>Code</h4>
@@ -52,6 +55,8 @@
 &lt;h4>Heading 4&lt;/h4>
 &lt;h5>Heading 5&lt;/h5>
 &lt;h6>Heading 6&lt;/h6></code>
+<hr>
+
          <h4>Example</h4>
          <div class="well">
             <!-- h$*6{Heading $} -->
@@ -63,7 +68,7 @@
             <h6>Heading 6</h6>
          </div>
 
-         <h3>Paragraphs</h3>
+         <h3>Body</h3>
 
          <div class="well">
             <!-- p*3>lorem50 -->
@@ -104,10 +109,12 @@
             <div class="col-3"><div class="well">Column 3</div></div>
             <div class="col-6"><div class="well">Column 6</div></div>
             <div class="col-3"><div class="well">Column 3</div></div>
+            <div class="col-12"><div class="well">Column 12</div></div>
          </div>
       </div>
    </div>
-   <div class="container">
+   
+   <!--<div class="container">
       <div class="card soft">
          <div>
             <h3>Complex Grids</h3>
@@ -142,7 +149,7 @@
             </div></div>
          </div>
       </div>
-   </div>
+   </div>-->
 
 
    <div class="container">
@@ -179,13 +186,13 @@
 
          <div class="grid gap large">
             <div class="col-xs-8 col-md-4 col-xl-12">
-               <div class="well">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, amet qui molestiae fugiat ut laboriosam porro ad vero deserunt fuga, velit, vitae pariatur ipsam facere quis, totam odit dolor? Veniam perferendis aliquid dignissimos vel optio laborum non, repudiandae aliquam laboriosam saepe, ad dolore necessitatibus tempora delectus corrupti praesentium ipsam repellat?</div>
+               <div class="well-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, amet qui molestiae fugiat ut laboriosam porro ad vero deserunt fuga, velit, vitae pariatur ipsam facere quis, totam odit dolor? Veniam perferendis aliquid dignissimos vel optio laborum non, repudiandae aliquam laboriosam saepe, ad dolore necessitatibus tempora delectus corrupti praesentium ipsam repellat?</div>
             </div>
             <div class="col-xs-4 col-md-4 col-xl-6">
-               <div class="well">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt commodi perspiciatis unde soluta ullam, libero assumenda quisquam quia, repudiandae expedita excepturi ea molestiae recusandae deleniti architecto, exercitationem veniam totam consequuntur eum corrupti. Fuga qui corporis nesciunt odio voluptatibus sed est? Alias, modi. Eos laboriosam et, esse ipsa dignissimos, nulla.</div>
+               <div class="well-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt commodi perspiciatis unde soluta ullam, libero assumenda quisquam quia, repudiandae expedita excepturi ea molestiae recusandae deleniti architecto, exercitationem veniam totam consequuntur eum corrupti. Fuga qui corporis nesciunt odio voluptatibus sed est? Alias, modi. Eos laboriosam et, esse ipsa dignissimos, nulla.</div>
             </div>
             <div class="col-xs-12 col-md-4 col-xl-6">
-               <div class="well">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, nobis fugiat, rem velit nulla veniam modi voluptates. Quos accusamus laudantium nihil rerum suscipit reprehenderit minima nam ducimus eaque eum. Quos animi ad sapiente earum. Nulla at veritatis dolore reiciendis aut. Corrupti nam dolor cumque commodi voluptates rem dignissimos iste distinctio.</div>
+               <div class="well-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, nobis fugiat, rem velit nulla veniam modi voluptates. Quos accusamus laudantium nihil rerum suscipit reprehenderit minima nam ducimus eaque eum. Quos animi ad sapiente earum. Nulla at veritatis dolore reiciendis aut. Corrupti nam dolor cumque commodi voluptates rem dignissimos iste distinctio.</div>
             </div>
          </div>
       </div>
@@ -202,24 +209,28 @@
       </div>
 
       <div>
-         <h3>Title</h3>
+         <h3>Category</h3>
       </div>
       <div class="grid gap">
          <!-- .col-xs-12.col-md-4*3>.card.soft>{Item $} -->
-         <div class="col-xs-12 col-md-4">
-            <div class="card soft"><h3>Item 1</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ut.</p>
+         <div class="col-xs-12 col-md-3">
+            <div class="card round"><h3>---Category 1</h3>
+               
             </div>
          </div>
-         <div class="col-xs-12 col-md-4">
-            <div class="card soft"><h3>Item 2</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ut.</p>
+         <div class="col-xs-12 col-md-3">
+            <div class="card round">
+               <h3>---Category 2</h3>
             </div>
          </div>
-         <div class="col-xs-12 col-md-4">
-            <div class="card soft"><h3>Item 3</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ut.</p>
+         <div class="col-xs-12 col-md-3">
+            <div class="card round"><h3>---Category 3</h3>
+
+              
             </div>
+         </div>
+         <div class="col-xs-12 col-md-3">
+            <div class="card round"><h3>---Category 4</h3>
          </div>
       </div>
    </div>
@@ -239,30 +250,32 @@
 
       <div class="card soft">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe iste quae quod mollitia quaerat sunt, eaque in aut autem aliquid exercitationem natus atque iusto vero reprehenderit? Ipsa, omnis sed?</div>
 
-      <h3>Hard Card</h3>
-
-      <div class="card hard">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe iste quae quod mollitia quaerat sunt, eaque in aut autem aliquid exercitationem natus atque iusto vero reprehenderit? Ipsa, omnis sed?</div>
-
-      <h3>Medium Card</h3>
-
-      <div class="card medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe iste quae quod mollitia quaerat sunt, eaque in aut autem aliquid exercitationem natus atque iusto vero reprehenderit? Ipsa, omnis sed?</div>
-
-      <h3>Dark Card</h3>
-
-      <div class="card dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe iste quae quod mollitia quaerat sunt, eaque in aut autem aliquid exercitationem natus atque iusto vero reprehenderit? Ipsa, omnis sed?</div>
-
-      <h3>Rainbow Card</h3>
-
-      <div class="card rainbow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe iste quae quod mollitia quaerat sunt, eaque in aut autem aliquid exercitationem natus atque iusto vero reprehenderit? Ipsa, omnis sed?</div>
+      
    </div>
    </div>
 
 
-   <div class="container">
+   <!--<div class="container">
       <h2>View Window</h2>
 
       <div class="view-window" style="background-image:url(img/mountains001.jpg)"></div>
+   </div>-->
+
+
+   <div class="container">
+      <h2>Button</h2>
+
+      <div class="button">
+         <a class="blue-button" href="#">ADD TO CART</a>
+      </div>
+    
+
+      <div class="button">
+         <a class="square-button" href="#">-  1  +</a>
+      </div>
+    
    </div>
+
 
 
    <div class="container" id="navigations">
@@ -270,10 +283,10 @@
 
       <script>
       const makeNav = (classes='') => {
-         const links = ['home','store','about','cart'];
+         const links = ['WEAR','PLAY','BATH','GEAR'];
          document.write(`
          <div>
-         <nav class="${classes}">
+         <nav class="${classes} well-body ">
             <ul>
                ${links.reduce((r,o,i)=>r+`<li><a href="#">${o}</a></li>`,'')}
             </ul>
@@ -283,34 +296,34 @@
       }
       </script>
 
-      <div class="card soft">
+      <!--<div class="card soft">
          <h3>Basic Nav</h3>
 
-         <!-- nav.nav>ul>li*4>a[href=#]{Link $} -->
-         <!-- <nav class="nav">
+         -- nav.nav>ul>li*4>a[href=#]{Link $} --
+         -- <nav class="nav">
             <ul>
                <li><a href="#">Link 1</a></li>
                <li><a href="#">Link 2</a></li>
                <li><a href="#">Link 3</a></li>
                <li><a href="#">Link 4</a></li>
             </ul>
-         </nav> -->
+         </nav> --
          <div class="grid">
             <div class="col-xs-4">
                <script>makeNav('nav')</script>
             </div>
             <div class="col-xs-8"></div>
          </div>
+      </div>-->
 
-         
+      <div >
+         <!--<h3>Flex Nav</h3>-->
+         <div > 
+            <script>makeNav('nav flex')</script>
+         </div>
       </div>
 
-      <div class="card soft">
-         <h3>Flex Nav</h3>
-         <script>makeNav('nav flex')</script>
-      </div>
-
-      <div class="card soft">
+      <!--<div class="card soft">
          <h3>Stretch Nav</h3>
          <script>makeNav('nav stretch')</script>
       </div>
@@ -323,7 +336,7 @@
       <div class="card soft">
          <h3>Breadcrumb Nav</h3>
          <script>makeNav('nav crumbs')</script>
-      </div>
+      </div>-->
    </div>
    
 </body>

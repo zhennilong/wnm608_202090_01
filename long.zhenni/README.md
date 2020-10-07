@@ -3,9 +3,9 @@
 ## Important Links
 
  
-- http://zhennilong.com/aau/wnm608/long.zhenni/index.html
+- http://zhennilong.com/aau/wnm608/long.zhenni/landingpage.html
 
-- http://zhennilong.com/aau/wnm608/long.zhenni/styleguide
+- http://zhennilong.com/aau/wnm608/long.zhenni/styleguide/index.html
 
 
 

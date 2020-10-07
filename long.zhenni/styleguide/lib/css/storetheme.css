@@ -1,16 +1,27 @@
  :root {
-   --color-neutral-light: white;
+   --color-neutral-light: #F5F9FF;
    --color-neutral-medium:#35BDF2;
    --color-neutral-dark:#392f2f;
+
+   --color-blue: #7BA4DB;
+   --color-yellow: #F4DA40;
+   --color-green: #85B09A;
+   --color-orange: #FF6A39;
+   --color-purple: #7566A0;
 }
 
+
+
 body {
-   font-family: 'Roboto', sans-serif;
-   background-color:#f9f9f9;
+   font-family: 'Nunito', sans-serif;
+   font-weight: 400;
    padding-bottom: 10em;
 }
 
-
+.bodyfont {
+     font-family: 'Nunito', sans-serif;
+   font-weight: 800;
+}
 
 
 .view-window>h2 {
@@ -26,61 +37,12 @@ body {
 }
 
 
-.display-flex {
-    flex-direction: column;
-    align-items: center;
-}
-
-
-
-.meet-echo {
-  margin: auto;
-}
-
-.article1{
-      display: flex;
-    justify-content: center;
-    flex-direction: column;
-    color: #35BDF2;
-    background-color: #0F1640;
-    padding: 50px;
-}
-
-.article-card01{
-  max-width: 700px;
-  margin: auto;
-  text-align: center;
-  line-height: 2;
-}
-
-.view-window h2 {
-   color: white;
-   text-align: center;
-   font-family: 'Josefin Sans', sans-serif;
-   font-weight: 700;
-   font-size: 1.8em;
-   letter-spacing: 0.2em;
-}
-
-
-.largewords {
-   color: white;
-   text-align: center;
-   font-family: 'Josefin Sans', sans-serif; 
-   font-weight: 100;
-} 
 
 .view-window p {
    font-size: 4em;
 }
 
-.container .card {
-   max-width: 400px;
-   background-color: #CAEAF7;
-   color: black;
-   margin:50px;
-   text-align: center;
-    }
+
 
 
 
