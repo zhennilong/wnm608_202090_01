@@ -205,20 +205,34 @@
 
 
 
-   <div class="container" id="card">
+    <div class="container" class="card">
       <h2>Card</h2>
 
-      <div class="well left">
+      <div class="well">
 
       <h3>Basic Card</h3>
 
-      <div class="card soft">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe iste quae quod mollitia quaerat sunt, eaque in aut autem aliquid exercitationem natus atque iusto vero reprehenderit? Ipsa, omnis sed?</div>
+      <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe iste quae quod mollitia quaerat sunt, eaque in aut autem aliquid exercitationem natus atque iusto vero reprehenderit? Ipsa, omnis sed?</div>
 
       <h3>Soft Card</h3>
 
-      <div class="card soft ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe iste quae quod mollitia quaerat sunt, eaque in aut autem aliquid exercitationem natus atque iusto vero reprehenderit? Ipsa, omnis sed?</div>
+      <div class="card soft">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe iste quae quod mollitia quaerat sunt, eaque in aut autem aliquid exercitationem natus atque iusto vero reprehenderit? Ipsa, omnis sed?</div>
 
-      
+      <h3>Hard Card</h3>
+
+      <div class="card hard">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe iste quae quod mollitia quaerat sunt, eaque in aut autem aliquid exercitationem natus atque iusto vero reprehenderit? Ipsa, omnis sed?</div>
+
+      <h3>Medium Card</h3>
+
+      <div class="card medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe iste quae quod mollitia quaerat sunt, eaque in aut autem aliquid exercitationem natus atque iusto vero reprehenderit? Ipsa, omnis sed?</div>
+
+      <h3>Dark Card</h3>
+
+      <div class="card dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe iste quae quod mollitia quaerat sunt, eaque in aut autem aliquid exercitationem natus atque iusto vero reprehenderit? Ipsa, omnis sed?</div>
+
+      <h3>Rainbow Card</h3>
+
+      <div class="card rainbow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe iste quae quod mollitia quaerat sunt, eaque in aut autem aliquid exercitationem natus atque iusto vero reprehenderit? Ipsa, omnis sed?</div>
    </div>
    </div>
 
@@ -230,21 +244,32 @@
    </div>-->
 
 
-   <div class="container">
-      <h2>Button</h2>
+  
 
-      <div class="button">
-         <a class="blue-button" href="#">ADD TO CART</a>
-      </div>
-    
 
-      <div class="button">
-         <a class="square-button" href="#">-  1  +</a>
-      </div>
-    
+
+
+
+    <div class="container">
+      <h2>View Window</h2>
+
+      <div class="view-window" style="background-image:url(lib/img/test.jpg)"></div>
    </div>
 
 
+<div class="container ">
+   <h2>Promo window</h2>
+   <div class="card soft display-flex promo">
+      
+      <div class="article flex-stretch promo-text" style="width:50%">
+         <div class="promo-text" style="width:60%">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe iste quae quod mollitia quaerat sunt</div>
+      </div>
+      <div class="flex-stretch display-flex flex-align-center flex-justify-center" style="width:50%">
+      <img src="lib/img/test.jpg" alt="test img">
+      </div>
+   </div>
+</div>
 
    <div class="container" id="navigations">
       <h2>Navigations</h2>
@@ -263,74 +288,16 @@
          `)
       }
       </script>
-
-      <!--<div class="card soft">
-         <h3>Basic Nav</h3>
-
-         -- nav.nav>ul>li*4>a[href=#]{Link $} --
-         -- <nav class="nav">
-            <ul>
-               <li><a href="#">Link 1</a></li>
-               <li><a href="#">Link 2</a></li>
-               <li><a href="#">Link 3</a></li>
-               <li><a href="#">Link 4</a></li>
-            </ul>
-         </nav> --
-         <div class="grid">
-            <div class="col-xs-4">
-               <script>makeNav('nav')</script>
-            </div>
-            <div class="col-xs-8"></div>
-         </div>
-      </div>-->
-
-      <div >
-         <!--<h3>Flex Nav</h3>-->
+       <div >
          <div > 
             <script>makeNav('nav flex')</script>
          </div>
       </div>
-
-      <!--<div class="card soft">
-         <h3>Stretch Nav</h3>
-         <script>makeNav('nav stretch')</script>
-      </div>
-
-      <div class="card soft">
-         <h3>Pills Nav</h3>
-         <script>makeNav('nav pills')</script>
-      </div>
-
-      <div class="card soft">
-         <h3>Breadcrumb Nav</h3>
-         <script>makeNav('nav crumbs')</script>
-      </div>-->
-   </div>
-
-    <div class="container">
-      <h2>View Window</h2>
-
-      <div class="view-window" style="background-image:url(lib/img/test.jpg)"></div>
-   </div>
-
+   
 
    <div class="container" id="navigations">
       <h2>Navigations</h2>
 
-      <script>
-      const makeNav = (classes='') => {
-         const links = ['home','store','about','cart'];
-         document.write(`
-         <div>
-         <nav class="${classes}">
-            <ul>
-               ${links.reduce((r,o,i)=>r+`<li><a href="#">${o}</a></li>`,'')}
-            </ul>
-         </nav>
-         </div>
-         `)
-      }
-      </script>
 
       <div class="card soft">
          <h3>Basic Nav</h3>
@@ -379,7 +346,7 @@
 
 
 
-   <script>
+  <script>
    const makeTable = (classes='') => {
       const head = ['ID','Office','Name','Email','Phone'];
       const body = [
@@ -432,7 +399,7 @@
       <div class="card soft">
          <h3>Lined Border</h3>
 
-         <script>makeTable('table lined border')</script>
+         <script>makeTable('tabl e lined border')</script>
       </div>
 
       <div class="card soft">
@@ -446,9 +413,14 @@
 
          <script>makeTable('table lined all striped')</script>
       </div>
+
+       <div class="card soft">
+         <h3>Colored</h3>
+
+         <script>makeTable('table colored')</script>
+      </div>
       
    </div>
-
 
    <div class="container">
       <h2>Forms</h2>
@@ -482,25 +454,43 @@
                   <label for="example-search" class="form-label">Search</label>
                </div>
                <div class="flex-stretch">
-                  <input id="example-search" type="search" placeholder="Text" class="form-input">
+                  <input id="example-search" type="search" placeholder="Text" class="rectangle-frame">
                </div>
                <div class="flex-none">
                   <label for="example-search" class="form-label">Search</label>
                </div>
                <div class="flex-stretch">
-                  <input id="example-search" type="search" placeholder="Text" class="form-input">
+                  <input id="example-search" type="search" placeholder="Text" class="rectangle-frame">
                </div>
             </div>
          </form>
 
          <h3>Buttons</h3>
 
+
+     
+
+      <div class="button">
+         <a class="button-regular" href="#">ADD TO CART</a>
+      </div>
+    
+    <div class="button">
+         <a class="button-action" href="#">Checkout</a>
+      </div>
+
+      <div class="button">
+         <a class="square-button" href="#">-  1  +</a>
+      </div>
+ 
+
+         <!--
          <div class="form-control">
             <button type="button" class="form-button">Button</button>
          </div>
          <div class="form-control">
             <input type="button" class="form-button" value="Button">
          </div>
+
          <div class="form-control">
             <div class="display-flex flex-align-center">
                <div class="flex-stretch">Chose on the right</div>
@@ -514,6 +504,7 @@
             <a href="#" class="btn inline">Button</a>
             <a href="#" class="btn inline">Button</a>
          </div>
+         -->
 
          <h3>Hotdog</h3>
 
@@ -525,7 +516,7 @@
          <form>
             <div class="form-control">
                <div class="hotdog">
-                  <img src="img/icons/email.svg" alt="" class="icon">
+                  <img src="lib/img/iconmonstr-magnifier-2.svg" alt="" class="icon">
                   <input type="text" id="example-email">
                </div>
             </div>
@@ -533,7 +524,7 @@
             <div class="form-control">
                <div class="hotdog">
                   <input type="password" id="example-password">
-                  <img src="img/icons/password.svg" alt="" class="icon">
+                  <img src="lib/img/password.svg" alt="" class="icon">
                </div>
             </div>
          </form>
@@ -588,7 +579,7 @@
    <div class="container">
       <h2>Products</h2>
       
-      <div class="well">
+      <!--<div class="well">
          <h3>Figure</h3>
          <figure>
             <img src="https://via.placeholder.com/600x600" alt="">
@@ -613,7 +604,7 @@
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dignissimos voluptate at, ipsam reiciendis sed magni perspiciatis, exercitationem sit incidunt aspernatur dolorum ullam, commodi? Similique vel, laborum magni architecto dolore nostrum animi, voluptate corrupti enim. Minima mollitia maxime quo repudiandae.</p>
                <p>Reiciendis corrupti ipsum harum minus quam, velit nobis ducimus voluptatem temporibus neque dolorum officiis inventore? Optio iure doloremque voluptatibus animi impedit tenetur rerum ipsam. Cupiditate repellendus inventore sit aut odio alias iste, nostrum, molestiae? Accusamus rerum minus sed molestias cum.</p>
             </div>
-         </div>
+         </div>-->
 
       
  <h3>Product Detail</h3>
@@ -652,8 +643,8 @@
       </div>
       <div class="grid gap ">
          <!-- .col-xs-12.col-md-4*3>.card.soft>{Item $} -->
-         <div class="col-xs-12 col-md-6 col-lg-3">
-           <div class="card round product-card_image">
+         <div class="col-xs-12 col-md-6 col-lg-3 card soft">
+           <div class=" product-card_image">
              <a href="#">
                <div>
                   <img src="lib/img/test02.jpg" alt="test image">
@@ -670,8 +661,8 @@
            </div>
         </div>
 
-          <div class="col-xs-12 col-md-6 col-lg-3">
-           <div class="card round product-card_image">
+          <div class="col-xs-12 col-md-6 col-lg-3 card soft">
+           <div class="product-card_image">
              <a href="#">
                <div>
                   <img src="lib/img/test02.jpg" alt="test image">
@@ -689,8 +680,8 @@
         </div>
 
 
-       <div class="col-xs-12 col-md-6 col-lg-3">
-           <div class="card round product-card_image">
+       <div class="col-xs-12 col-md-6 col-lg-3 card soft">
+           <div class="product-card_image">
              <a href="#">
                <div>
                   <img src="lib/img/test02.jpg" alt="test image">
@@ -707,8 +698,8 @@
            </div>
         </div>
 
-        <div class="col-xs-12 col-md-6 col-lg-3">
-           <div class="card round product-card_image">
+        <div class="col-xs-12 col-md-6 col-lg-3 card soft">
+           <div class="product-card_image">
              <a href="#">
                <div>
                   <img src="lib/img/test02.jpg" alt="test image">

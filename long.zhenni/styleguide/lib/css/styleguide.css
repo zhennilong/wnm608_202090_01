@@ -7,7 +7,7 @@
 
 
 :root {
-   --color-neutral-light: #C2CFE1;
+   --color-neutral-light: #F1F3FA;
    --color-neutral-medium:#DB9891;
    --color-neutral-dark:#393D42
 ;
@@ -32,14 +32,18 @@ body {
 }
   
 
-h1,
-h2,
-h3,
+
 h4,
 h5,
 h6 {
    font-family:'Ubuntu', sans-serif;
    color: var(--color-neutral-dark);}
+
+
+h1,
+h2,
+h3 {font-family:'Ubuntu', sans-serif;
+   color: var(--color-blue);}
 
 
 
@@ -135,7 +139,7 @@ code {
       text-decoration:underline;
    }
 .nav.crumbs li:not(:first-child)::before {
-      content:'â†’';
+      content:'→';
       font-family:arial;
    }
 
@@ -173,7 +177,20 @@ code {
    margin: 1em;
    position:relative;
    overflow:hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    /* border: solid 0.01rem #C2CFE1; */
+
 }
+
+
+.promo {background-color: var(--color-neutral-medium)}
+
+.promo-text {
+  text-align: center;
+  margin:auto;
+}
+
+
 
    .product-card_image {
     border-radius: 10%;
@@ -197,6 +214,7 @@ code {
 img {
       vertical-align: middle;
     border-style: none;
+    border-radius: 10%;
     max-width: 100%;
     height: auto;
 }
@@ -204,9 +222,8 @@ img {
 
    .card.soft {
     border-radius: 0.5em;
-    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
-    /* border: solid 0.01rem #C2CFE1; */
-    background-color: var(--color-neutral-light);
+
+  
    }
 
 
@@ -227,6 +244,9 @@ img {
       background-color:var(--color-neutral-medium);
    }
 
+   .card.rainbow {
+      background-image:linear-gradient(-45deg,#ffaac1,#e8fb8f,#a0a0f6);
+   }
 
    .card.flat {
       padding:0;
@@ -270,8 +290,18 @@ img {
   color: var(--color-blue);
 }
 
-.blue-button {
+.button-regular {
     background-color: var(--color-blue);
+    border-radius: 50px;
+    padding: 10px 80px;
+    color: var(--color-white);
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1em;
+}
+
+.button-action {
+    background-color: var(--color-orange);
     border-radius: 50px;
     padding: 10px 80px;
     color: var(--color-white);
@@ -320,20 +350,20 @@ img {
 
 .table.lined.all tbody tr,
 .table.lined.horizontal tbody tr {
-   border-top:1px solid var(--color-neutral-medium);
+   border-top:1px solid var(--color-blue);
 }
 
 .table.lined.all th:not(:first-child),
 .table.lined.all td:not(:first-child),
 .table.lined.vertical th:not(:first-child),
 .table.lined.vertical td:not(:first-child) {
-   border-left:1px solid var(--color-neutral-medium);
+   border-left:1px solid var(--color-blue);
 }
 
 
 .table.lined.all,
 .table.lined.border {
-   border:1px solid var(--color-neutral-medium);
+   border:1px solid var(--color-blue);
 }
 
 
@@ -345,12 +375,12 @@ img {
 
 .form-input {
     display: inline-block;
-    width: 100%;
+    width: 50%;
     border-width: 0;
     background-color: transparent;
     font: inherit;
     padding: 0.5em 1em;
-    border-bottom: 1px solid var(--color-neutral-medium);
+    border-bottom: 1px solid var(--color-blue);
     outline: 0;
 }
 .form-control {
@@ -358,7 +388,19 @@ img {
 }
 .form-label {
     font-size: 0.8em;
-    color: var(--color-neutral-medium);
+    color: var(--color-blue);
+}
+
+
+.rectangle-frame {
+  border: soild 1px var(--color-blue);
+  display: inline-block;
+    width: 50%;
+    border-width: 0;
+    background-color: transparent;
+    font: inherit;
+    padding: 0.5em 1em;
+    outline: 0;
 }
 
 .btn,
@@ -395,7 +437,7 @@ img {
 
 .hotdog {
    display: inline-flex;
-   width: 100%;
+   width: 50%;
    /* line-height: 3rem; */
    font: inherit;
    background-color: var(--color-neutral-light);
@@ -405,7 +447,7 @@ img {
    outline:0;
 }
    .hotdog.dark {
-      background-color: var(--color-neutral-dark);
+      background-color: var(--color-blue);
       color: var(--color-neutral-light);
    }
 
@@ -435,15 +477,15 @@ img {
    position:relative;
 }
 .form-select::after {
-   position:absolute;
-   content:'â–¼';
-   font-family:Arial,sans-serif;
-   font-size:0.9em;
-   top:50%;
-   transform:translateY(-50%);
-   right:0.3rem;
-   pointer-events:none;
-   color:var(--color-neutral-medium);
+    position: absolute;
+    content: '▼';
+    font-family: Arial,sans-serif;
+    font-size: 0.9em;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.3rem;
+    pointer-events: none;
+    color: var(--color-neutral-dark);
 }
 
 
@@ -469,7 +511,7 @@ img {
     width: 2em;
     height: 1em;
     background-color: var(--color-neutral-light);
-    border: 0.1em solid var(--color-neutral-medium);
+    border: 0.1em solid var(--color-blue);
     border-radius: 1em;
     position: relative;
     font-size: 1.3em;
