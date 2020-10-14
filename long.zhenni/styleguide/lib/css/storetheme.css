@@ -1,8 +1,10 @@
  :root {
-   --color-neutral-light: #F5F9FF;
-   --color-neutral-medium:#35BDF2;
-   --color-neutral-dark:#392f2f;
+   --color-neutral-light: #C2CFE1;
+   --color-neutral-medium:#DB9891;
+   --color-neutral-dark:#393D42;
 
+   --color-white:#fff;
+   --color-black:#000;
    --color-blue: #7BA4DB;
    --color-yellow: #F4DA40;
    --color-green: #85B09A;

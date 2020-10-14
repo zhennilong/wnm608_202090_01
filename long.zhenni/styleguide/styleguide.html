@@ -201,44 +201,7 @@
 
 
 
-   <div class="container">
-      <!--<div class="card soft">
-         <div>
-            <h3>Layout</h3>
-         </div>
-      </div>-->
 
-      <div>
-         <h3>Category</h3>
-      </div>
-      <div class="grid gap ">
-         <!-- .col-xs-12.col-md-4*3>.card.soft>{Item $} -->
-         <div class="col-xs-12 col-md-3">
-           <a href="#">
-            <div class="card round"></div>
-            <h2 class="well-center">Clothes</h2>
-           </a>
-         </div>
-         <div class="col-xs-12 col-md-3">
-            <a href="#">
-               <div class="card round"></div>
-               <h2 class="well-center">Pajamas</h2>
-            </a>
-         </div>
-         <div class="col-xs-12 col-md-3">
-            <a href="#">
-               <div class="card round"></div>
-               <h2 class="well-center">Shoes</h2>
-            </a>
-         </div>
-         <div class="col-xs-12 col-md-3">
-            <a href="#">
-               <div class="card round"></div>
-               <h2 class="well-center">Accessaries</h2>
-            </a>
-         </div>
-      </div>
-   </div>
 
 
 
@@ -635,10 +598,10 @@
 
          <h3>Product Figure</h3>
          <div class="grid gap">
-            <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12 col-md-6">
                <figure class="product-item">
                   <div class="product-image">
-                     <img src="https://via.placeholder.com/600x600?text=Product" alt="">
+                     <img src="lib/img/test03.jpg" alt="sleep bag">
                   </div>
                   <figcaption class="product-description">
                      <div class="product-price">&dollar;3.99</div>
@@ -646,55 +609,126 @@
                   </figcaption>
                </figure>
             </div>
-            <div class="col-xs-12 col-md-8">
+            <div class="col-xs-12 col-md-6">
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dignissimos voluptate at, ipsam reiciendis sed magni perspiciatis, exercitationem sit incidunt aspernatur dolorum ullam, commodi? Similique vel, laborum magni architecto dolore nostrum animi, voluptate corrupti enim. Minima mollitia maxime quo repudiandae.</p>
                <p>Reiciendis corrupti ipsum harum minus quam, velit nobis ducimus voluptatem temporibus neque dolorum officiis inventore? Optio iure doloremque voluptatibus animi impedit tenetur rerum ipsam. Cupiditate repellendus inventore sit aut odio alias iste, nostrum, molestiae? Accusamus rerum minus sed molestias cum.</p>
             </div>
          </div>
 
-         <h3>Product Grid</h3>
+      
+ <h3>Product Detail</h3>
+ <div class="grid gap">
+    <div class="col-xs-12 col-md-6 ">
+       <div class="product-card_image">
+          <img src="lib/img/test03.jpg" alt="sleep bag">
+       </div>
+    </div>
+    <div class="col-xs-12 col-md-6 ">
+       <div class="product-card_info">
+          <div class="product-title">
+             <h2>Sleep Bag</h2>
+             <h3>$65.29</h3>
+          </div>
+          <div class="product-description">
+             <p>Reiciendis corrupti ipsum harum minus quam, velit nobis ducimus voluptatem temporibus neque dolorum officiis inventore? Optio iure doloremque voluptatibus animi impedit tenetur rerum ipsam. Cupiditate repellendus inventore sit aut odio alias iste, nostrum, molestiae? Accusamus rerum minus sed molestias cum.</p>
+          </div>
+          <div class="button"></div>
+       </div>
 
-         <div class="grid gap">
-            <div class="col-xs-12 col-md-4">
-               <a href="#">
-                  <figure class="product-item">
-                     <div class="product-image">
-                        <img src="https://via.placeholder.com/600x600?text=Product" alt="">
-                     </div>
-                     <figcaption class="product-description">
-                        <div class="product-price">&dollar;3.99</div>
-                        <div class="product-title">Banana</div>
-                     </figcaption>
-                  </figure>
-               </a>
-            </div>
-            <div class="col-xs-12 col-md-4">
-               <a href="#" class="display-block">
-                  <figure class="product-item">
-                     <div class="product-image">
-                        <img src="https://via.placeholder.com/600x600?text=Product" alt="">
-                     </div>
-                     <figcaption class="product-description">
-                        <div class="product-price">&dollar;3.99</div>
-                        <div class="product-title">Banana</div>
-                     </figcaption>
-                  </figure>
-               </a>
-            </div>
-            <div class="col-xs-12 col-md-4">
-               <a href="#">
-                  <figure class="product-item">
-                     <div class="product-image">
-                        <img src="https://via.placeholder.com/600x600?text=Product" alt="">
-                     </div>
-                     <figcaption class="product-description">
-                        <div class="product-price">&dollar;3.99</div>
-                        <div class="product-title">Banana</div>
-                     </figcaption>
-                  </figure>
-               </a>
-            </div>
+    </div>
+ </div>
+
+
+
+   <div class="container">
+      <!--<div class="card soft">
+         <div>
+            <h3>Layout</h3>
          </div>
+      </div>-->
+
+      <div>
+         <h3>Product List</h3>
+      </div>
+      <div class="grid gap ">
+         <!-- .col-xs-12.col-md-4*3>.card.soft>{Item $} -->
+         <div class="col-xs-12 col-md-6 col-lg-3">
+           <div class="card round product-card_image">
+             <a href="#">
+               <div>
+                  <img src="lib/img/test02.jpg" alt="test image">
+               </div>
+            </a>
+           </div>
+           <div class="product-card_info">
+            <h3 class="product-card_info-title">
+              <a href="#">Baby Shoes</a>
+            </h3>
+            <div class="product-card_price">
+               $39.99
+            </div>
+           </div>
+        </div>
+
+          <div class="col-xs-12 col-md-6 col-lg-3">
+           <div class="card round product-card_image">
+             <a href="#">
+               <div>
+                  <img src="lib/img/test02.jpg" alt="test image">
+               </div>
+            </a>
+           </div>
+           <div class="product-card_info">
+            <h3 class="product-card_info-title">
+              <a href="#">Baby Shoes</a>
+            </h3>
+            <div class="product-card_price">
+               $39.99
+            </div>
+           </div>
+        </div>
+
+
+       <div class="col-xs-12 col-md-6 col-lg-3">
+           <div class="card round product-card_image">
+             <a href="#">
+               <div>
+                  <img src="lib/img/test02.jpg" alt="test image">
+               </div>
+            </a>
+           </div>
+           <div class="product-card_info">
+            <h3 class="product-card_info-title">
+              <a href="#">Baby Shoes</a>
+            </h3>
+            <div class="product-card_price">
+               $39.99
+            </div>
+           </div>
+        </div>
+
+        <div class="col-xs-12 col-md-6 col-lg-3">
+           <div class="card round product-card_image">
+             <a href="#">
+               <div>
+                  <img src="lib/img/test02.jpg" alt="test image">
+               </div>
+            </a>
+           </div>
+           <div class="product-card_info">
+            <h3 class="product-card_info-title">
+              <a href="#">Baby Shoes</a>
+            </h3>
+            <div class="product-card_price">
+               $39.99
+            </div>
+           </div>
+        </div>
+
+      </div>
+   </div>
+
+
       </div>
    </div>
    
