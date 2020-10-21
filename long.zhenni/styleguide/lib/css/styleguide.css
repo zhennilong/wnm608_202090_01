@@ -102,12 +102,13 @@ code {
 .nav a {
    display:block;
    padding: 0.2em 0.5em;
+   line-height: 25px;
 }
 
 .nav a:hover {
 
    text-decoration: underline;
-   line-height: 25px;
+   
    color: var(--color-blue);
 }
 
