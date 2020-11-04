@@ -7,8 +7,6 @@ $users = file_get_json("users.json");
 
 
 
-
-
 function showUserPage($user) {
 
 $classes = implode(", ", $user->classes);
@@ -17,7 +15,7 @@ echo <<<HTML
 <nav class="nav crumbs">
    <ul>
       <li><a href="{$_SERVER['PHP_SELF']}">Back</a></li>
-      <li><a href="{$_SERVER['PHP_SELF']}">Edit</a></li>
+      
    </ul>
 </nav>
 <div>
@@ -85,6 +83,9 @@ HTML;
          if(isset($_GET['id'])) {
 
             showUserPage($users[$_GET['id']]);
+
+
+
 
          } else {
 
