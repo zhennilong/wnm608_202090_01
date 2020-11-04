@@ -18,6 +18,6 @@
          <div>This is the product #<?= $_GET['id'] ?></div>
       </div>
    </div>
-
+ 
 </body>
 </html>

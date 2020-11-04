@@ -87,6 +87,9 @@ code {
 
 .flex-align-center { align-items:center; }
 .flex-justify-center { justify-content:center; }
+.flex-justify-content-evenly {justify-content:space-evenly;}
+
+
 
 
 
@@ -161,6 +164,10 @@ code {
    padding:0 0.5em;
 }
 
+.nav-category {
+  margin: 0 40px;
+    min-width: 60px;
+}
 
 .view-window {
    position:relative;
