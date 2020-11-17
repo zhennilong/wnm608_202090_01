@@ -1,13 +1,28 @@
  :root {
-   --color-neutral-light: white;
-   --color-neutral-medium:#35BDF2;
-   --color-neutral-dark:#392f2f;
+   --color-neutral-light: #F1F3FA;
+   --color-neutral-medium:#DB9891;
+   --color-neutral-dark:#393D42;
+
+   --color-white:#fff;
+   --color-black:#000;
+   --color-blue: #7BA4DB;
+   --color-yellow: #F4DA40;
+   --color-green: #85B09A;
+   --color-orange: #FF6A39;
+   --color-purple: #7566A0;
 }
 
+
 body {
-   font-family: 'Roboto', sans-serif;
-   background-color:#f9f9f9;
+   font-family: 'Nunito', sans-serif;
+   font-weight: 400;
    padding-bottom: 10em;
+  background-color: #f9f9f9;
+}
+
+.bodyfont {
+     font-family: 'Nunito', sans-serif;
+   font-weight: 800;
 }
 
 
@@ -26,10 +41,10 @@ body {
 }
 
 
-.display-flex {
+/*.display-flex {
     flex-direction: column;
     align-items: center;
-}
+}*/
 
 
 
@@ -91,4 +106,96 @@ body {
 
 [class*='col-']>.well {
   height:100%;
+}
+
+/* Product List Design */
+.product-item {
+    margin: 0;
+    border-radius:0.7em;
+    background-color:white;
+    box-shadow:1px 1px 4px rgba(0,0,0,0.2);
+    padding:1em;
+    transition:all 0.3s;
+    display:block;
+    height:100%;
+}
+.product-item figure {
+  margin:0;
+}
+.product-item:hover {
+    box-shadow:1px 1px 12px rgba(0,0,0,0.4);
+}
+.product-image img {
+   width:100%;
+}
+.product-price,
+.product-title {
+   font-weight:normal;
+}
+a:hover .product-item {
+   text-decoration:none !important;
+}
+.product-price {
+    font-size: 1.2em;
+    padding: 0.2em 0.4em;
+}
+.product-title {
+    font-size: 0.9em;
+}
+
+.product-image {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 80%;
+}
+.image-main {
+  position:relative;
+  height:0;
+  overflow:hidden;
+  padding-bottom:60%;
+}
+.image-main img,
+.product-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+.image-thumbs img {
+  width:120px;
+  height:120px;
+  object-fit:cover;
+}
+
+
+
+
+.navbar {
+  margin-bottom:1em;
+}
+
+
+
+
+
+.card :first-child,
+.card-section :first-child {
+  margin-top:0;
+}
+
+
+
+
+@media (max-width:600px) {
+  h2 {
+    font-size:1em;
+  }
 }

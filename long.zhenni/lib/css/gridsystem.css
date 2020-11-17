@@ -4,6 +4,12 @@
 	grid-template-columns: repeat(12,1fr);
 }
 
+.grid-10 {
+   display:grid;
+   grid-template-columns:repeat(10, 1fr);
+}
+
+.grid-10.gap,
 .grid.gap {
 	--grid-gap: 1em;
 	grid-gap:var(--gird-gap);

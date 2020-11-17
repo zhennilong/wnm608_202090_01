@@ -20,6 +20,7 @@
          <ul class="display-flex">
             <li class="nav-category"><a href="index.php">Feeding</a></li>
             <li class="nav-category"><a href="product_list.php">Gear</a></li>
+            <li class="nav-category"><a href="product_cart.php">Cart</a></li>
          </ul>
       </nav>
    </div>

@@ -18,13 +18,31 @@ $empty_user = (object)[
 
 
 
-if(isset($_POST['user-name'])) {
-   $users[$_GET['id']]->name = $_POST['user-name'];
-   $users[$_GET['id']]->type = $_POST['user-type'];
-   $users[$_GET['id']]->email = $_POST['user-email'];
-   $users[$_GET['id']]->classes = explode(", ",$_POST['user-classes']);
+switch($_GET['crud']) {
+   case 'update':
+      $users[$_GET['id']]->name = $_POST['user-name'];
+      $users[$_GET['id']]->type = $_POST['user-type'];
+      $users[$_GET['id']]->email = $_POST['user-email'];
+      $users[$_GET['id']]->classes = explode(", ",$_POST['user-classes']);
 
-   file_put_contents($filename,json_encode($users));
+      file_put_contents($filename,json_encode($users));
+
+      header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
+      break;
+   case 'create':
+      $empty_user->name = $_POST['user-name'];
+      $empty_user->type = $_POST['user-type'];
+      $empty_user->email = $_POST['user-email'];
+      $empty_user->classes = explode(", ",$_POST['user-classes']);
+
+      $id = count($users);
+
+      $users[] = $empty_user;
+
+      file_put_contents($filename,json_encode($users));
+
+      header("location:{$_SERVER['PHP_SELF']}?id=$id");
+      break;
 }
 
 
@@ -36,6 +54,7 @@ function showUserPage($user) {
 $id = $_GET['id'];
 $classes = implode(", ", $user->classes);
 $addoredit = $id=='new' ? 'Add' : 'Edit';
+$createorupdate = $id=='new' ? 'create' : 'update';
 
 
 
@@ -69,7 +88,7 @@ echo <<<HTML
    <div class="col-xs-12 col-md-4">$userdata</div>
    <div class="col-xs-12 col-md-8">
       <div class="card soft">
-         <form method="post" action="">
+         <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&crud=$createorupdate">
             <h2>$addoredit User</h2>
             <div class="form-control">
                <label for="user-name" class="form-label">Name</label>
