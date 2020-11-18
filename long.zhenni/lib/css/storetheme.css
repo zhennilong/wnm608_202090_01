@@ -90,8 +90,8 @@ body {
 }
 
 .container .card {
-   max-width: 400px;
-   background-color: #CAEAF7;
+   /*max-width: 400px;
+   background-color: #CAEAF7;*/
    color: black;
    margin:50px;
    text-align: center;
@@ -128,6 +128,12 @@ body {
 .product-image img {
    width:100%;
 }
+
+
+.product-description {
+  text-align: center;
+}
+
 .product-price,
 .product-title {
    font-weight:normal;
@@ -198,4 +204,14 @@ a:hover .product-item {
   h2 {
     font-size:1em;
   }
+}
+
+
+/* checkout page layout */
+.main {
+  width: 45%;
+}
+
+.summary {
+  width: 45%;
 }

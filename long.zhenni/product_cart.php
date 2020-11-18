@@ -11,13 +11,14 @@ $cart = MYSQLIQuery("SELECT * FROM products WHERE id in (5,9,12)");
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-   <title>Product Cart</title>
+   <title>Shopping Cart</title>
 
    <?php include "parts/meta.php" ?>
 </head>
 <body>
    
    <?php include "parts/navbar.php" ?>
+
 
 
    <div class="container">
