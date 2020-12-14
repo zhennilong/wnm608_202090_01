@@ -28,7 +28,7 @@ $thumbs_elements = array_reduce($thumbs,function($r,$o){
          <div class="col-xs-12 col-md-7">
             <div class="card soft">
                <div class="image-main">
-                  <img src="styleguide/lib/<?= $product->image_thumb ?>" alt="">
+                  <img src="styleguide/lib/<?= $product->image_main ?>" alt="">
                </div>
                <div class="image-thumbs">
                   <?= $thumbs_elements ?>
@@ -43,6 +43,10 @@ $thumbs_elements = array_reduce($thumbs,function($r,$o){
                   <div>&dollar;<?= $product->price ?></div>
                </div>
                <div class="card-section">
+
+                  <div class="nocard">
+         <p><?= $product->description ?></p>
+      </div>
                   <div class="form-control">
                      
                      <label for="product-amount" class="form-label">Amount</label>
@@ -65,42 +69,31 @@ $thumbs_elements = array_reduce($thumbs,function($r,$o){
                   <div class="form-control">
                      
                      <label for="product-color" class="form-label">Color</label>
-                     <div class="form-select">
+                     <!-- <div class="form-select">
                         <select name="product-color" id="product-color">
                            <option value="red">Red</option>
                            <option value="green">Green</option>
                            <option value="blue">Blue</option>
                         </select>
-                     </div>
+                     </div> -->
                   </div>
                   <div class="form-control">
-                     <input type="submit" class="form-button" value="Add To Cart">
+                     <input type="submit" class="button-action" value="Add To Cart">
                   </div>
                </div>
             </form>
          </div>
       </div>
-      <div class="card soft medium">
-         <p><?= $product->description ?></p>
-      </div>
-         <h2>Related Products</h2>
+      
+          <h2>Related Products</h2>
 
-         <div class="grid gap">
-           
-            <?php
+         <?php
 
-            echo array_reduce(
-               MYSQLIQuery("
-                  SELECT *
-                  FROM products
-                  WHERE id in (4,6,8)
-               "),
-               'makeProductList'
-            );
+         recommendSimilar($product->category,$product->id);
 
-            ?>
+         ?>
          </div>
    </div>
-
+<?php include "parts/footer.php" ?>
 </body>
 </html>

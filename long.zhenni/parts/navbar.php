@@ -1,11 +1,11 @@
 
 <header class="navbar">
-   <div class="container display-flex flex-align-center flex-justify-content-evenly">
+   <div class="display-flex flex-align-center flex-justify-content-evenly">
       <div class="flex-none">
          <nav class="nav ">
          <ul class="display-flex">
-            <li class="nav-category"><a href="index.php">Wear</a></li>
-            <li class="nav-category"><a href="product_list.php">Play</a></li>
+            <li class="nav-category"><a href="index.php">Home</a></li>
+            <li class="nav-category"><a href="product_list.php">Shop</a></li>
          </ul>
          </nav>
       </div>
@@ -21,9 +21,13 @@
       <div class="flex-none">
          <nav class="nav ">
          <ul class="display-flex">
-            <li class="nav-category"><a href="index.php">Feeding</a></li>
-            <li class="nav-category"><a href="product_list.php">Gear</a></li>
-            <li class="nav-category"><a href="product_cart.php">Cart</a></li>
+           
+            
+            <li class="nav-category"><a href="product_list.php">About</a></li>
+            <li><a href="product_cart.php">
+               <span>Cart</span>
+               <span class="badge"><?= makeCartBadge() ?></span>
+            </a></li>
          </ul>
          </nav>
       </div>

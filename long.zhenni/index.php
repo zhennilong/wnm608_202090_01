@@ -18,15 +18,18 @@ include_once "lib/php/functions.php";
 
 
 
-   <div class="view-window" style="background-image:url(img/bottle-841433_1920.jpg)">
-      <h2>Product Name</h2>
+   <div class="view-window" style="background-image:url(img/sleeping.JPG)">
+     
+     <h2>The soft & sustainable toys</h2>
    </div>
-   <div class="container">
-      <div class="card soft">
+   <div >
+      <div class="nocard">
          <h2>Welcome to the Store</h2>
-      </div>
+      </div> 
+      <?php include "parts/promo-window.php" ?>
    </div>
 
-  <?php include "parts/footer.php" ?>
+  
 </body>
+<?php include "parts/footer.php" ?>
 </html>

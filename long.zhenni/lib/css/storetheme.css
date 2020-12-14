@@ -16,7 +16,7 @@
 body {
    font-family: 'Nunito', sans-serif;
    font-weight: 400;
-   padding-bottom: 10em;
+   /*padding-bottom: 10em;*/
   background-color: #f9f9f9;
 }
 
@@ -108,12 +108,16 @@ body {
   height:100%;
 }
 
+
+
+
+
 /* Product List Design */
 .product-item {
     margin: 0;
     border-radius:0.7em;
     background-color:white;
-    box-shadow:1px 1px 4px rgba(0,0,0,0.2);
+    /*box-shadow:1px 1px 4px rgba(0,0,0,0.2);*/
     padding:1em;
     transition:all 0.3s;
     display:block;
@@ -122,18 +126,14 @@ body {
 .product-item figure {
   margin:0;
 }
-.product-item:hover {
+
+/*.product-item:hover {
     box-shadow:1px 1px 12px rgba(0,0,0,0.4);
-}
+}*/
+
 .product-image img {
    width:100%;
 }
-
-
-.product-description {
-  text-align: center;
-}
-
 .product-price,
 .product-title {
    font-weight:normal;
@@ -184,19 +184,35 @@ a:hover .product-item {
 
 
 
-.navbar {
-  margin-bottom:1em;
-}
 
 
 
 
-
-.card :first-child,
+/*.card :first-child,
 .card-section :first-child {
-  margin-top:0;
-}
+  margin-top:2em;
+}*/
 
+ /*  .card-section~.card-section {
+      border-top:1px solid var(--color-neutral-light);
+   }*/
+   .card-section {
+      padding:1em;
+   }
+
+   .card-section.button-action {
+    margin: 10px;
+   }
+
+
+
+
+span.badge:not(:empty)::after {
+  content:')';
+}
+span.badge:not(:empty)::before {
+  content:'(';
+}
 
 
 
@@ -206,7 +222,6 @@ a:hover .product-item {
   }
 }
 
-
 /* checkout page layout */
 .main {
   width: 45%;
@@ -215,3 +230,20 @@ a:hover .product-item {
 .summary {
   width: 45%;
 }
+
+
+
+-----newly add----
+
+.gap-among {
+
+}
+
+
+.primary-color-blue {
+    background-color: #7BA4DB;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+}
+

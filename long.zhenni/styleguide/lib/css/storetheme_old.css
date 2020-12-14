@@ -203,3 +203,10 @@ a:hover .product-item {
   }
 }
 
+.color-circle-large {
+    background-color: #7BA4DB;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+}
+

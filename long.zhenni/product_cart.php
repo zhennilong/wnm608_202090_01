@@ -25,7 +25,7 @@ $cart = getCartItems();
       <div class="grid gap">
          <div class="col-xs-12 col-md-8">
             <div class="card soft">
-               <h2>Product Cart</h2>
+               <h2 class="bottom-line">Product Cart</h2>
                <?
 
                echo array_reduce($cart,'makeCartList');
@@ -36,13 +36,15 @@ $cart = getCartItems();
          <div class="col-xs-12 col-md-4">
             <div class="card soft flat">
                <div class="card-section">
-                  <h2>Totals</h2>
+                  <h2 class="bottom-line">Totals</h2>
                </div>
                <?= cartTotals() ?>
             </div>
          </div>
       </div>
    </div>
+
+   <?php include "parts/footer.php" ?>
 
 </body>
 </html>

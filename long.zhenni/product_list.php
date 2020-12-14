@@ -2,6 +2,47 @@
 
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
+include_once "data/api.php";
+
+
+
+setDefault('s','');
+setDefault('t','products_all');
+setDefault('orderby_direction','DESC');
+setDefault('orderby','date_create');
+setDefault('limit','12');
+
+
+
+function makeSortOptions() {
+   $options = [
+      ["date_create","DESC","Latest Products"],
+      ["date_create","ASC","Oldest Products"],
+      ["price","DESC","Most Expensive"],
+      ["price","ASC","Least Expensive"]
+   ];
+   foreach($options as [$orderby,$direction,$title]) {
+      echo "
+      <option data-orderby='$orderby' data-direction='$direction'
+      ".($_GET['orderby']==$orderby && $_GET['orderby_direction']==$direction ? "selected" : "").">
+      $title
+      </option>
+      ";
+   }
+}
+
+function makeHiddenValues($arr1,$arr2) {
+   foreach(array_merge($arr1,$arr2) as $k=>$v) {
+      echo "<input type='hidden' name='$k' value='$v'>\n";
+   }
+}
+
+
+$result = makeStatement($_GET['t']);
+$products = isset($result['error']) ? [] : $result;
+
+
+
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -15,51 +56,87 @@ include_once "parts/templates.php";
    <?php include "parts/navbar.php" ?>
 
    <div class="container">
+
+      <form action="product_list.php" method="get" class="hotdog stack">
+
+         <input type="search" name="s" placeholder="Search"
+         value="<?= @$_GET['s'] ?>">
+
+         <?
+         makeHiddenValues([
+            "orderby"=>$_GET['orderby'],
+            "orderby_direction"=>$_GET['orderby_direction'],
+            "limit"=>$_GET['limit'],
+            "t"=>"search"
+         ],[]);
+         ?>
+
+         <button type="submit">Search</button>
+      </form>
+
+      <div class="display-flex" style="margin:1em 0">
+         <div class="flex-none display-flex">
+            <form class="gaps"  action="product_list.php" method="get">
+               <?
+               makeHiddenValues($_GET,[
+                  "category"=>"toy",
+                  "t"=>"products_by_category"
+               ]);
+               ?>
+
+               <input type="submit" value="Toy" class="form-button">
+            </form>
+            <form class="gaps" action="product_list.php" method="get">
+               <?
+               makeHiddenValues($_GET,[
+                  "category"=>"skin care",
+                  "t"=>"products_by_category"
+               ]);
+               ?>
+
+               <input type="submit" value="Skin Care" class="form-button">
+            </form>
+         </div>
+         <div class="flex-stretch"></div>
+         <div class="flex-none">
+            
+            <form action="product_list.php" method="get">
+
+               <?
+               makeHiddenValues($_GET,[]);
+               ?>
+               <div class="form-select-sort">
+                  <select onchange="checkSort(this)">
+                     <?=makeSortOptions()?>
+                  </select>
+               </div>
+            </form>
+         </div>
+      </div>
+
       
          <h2>Product List</h2>
 
          <div class="grid gap">
-
          
             <?php
 
-           // $conn = makeConn();
-
-            // $result = $conn->query("SELECT * FROM products");
-           //  if($conn->errno) die($conn->error);
-
-            // while($row = $result->fetch_object()) {
-            //    echo "<li>$row->name</li>";
-            // }
-
             echo array_reduce(
-               MYSQLIQuery("SELECT * FROM products
-                  ORDER BY date_create DESC 
-                  LIMIT 12"),
-               'makeProductList'
-               // function($r,$o) {
-               //   return $r."<li>
-               //   <a href='product_item.php?id=$o->id'>$o->name - &dollar;$o->price</a>
-               //  </li>";}
+            $products,
+            'makeProductList'
             );
 
-
             ?>
-            <!--<ul>-->
-            <!-- li*10>a[href='product_item.php?id=$']>{Product $} -->
-            <!-- <li><a href="product_item.php?id=1">Product 1</a></li>
-            <li><a href="product_item.php?id=2">Product 2</a></li>
-            <li><a href="product_item.php?id=3">Product 3</a></li>
-            <li><a href="product_item.php?id=4">Product 4</a></li>
-            <li><a href="product_item.php?id=5">Product 5</a></li>
-            <li><a href="product_item.php?id=6">Product 6</a></li>
-            <li><a href="product_item.php?id=7">Product 7</a></li>
-            <li><a href="product_item.php?id=8">Product 8</a></li>
-            <li><a href="product_item.php?id=9">Product 9</a></li>
-            <li><a href="product_item.php?id=10">Product 10</a></li>-->
-         <!--</ul>-->
+      
       </div>
    </div>
+
+   <div class="container">
+      <div class="card soft">
+         <a href="admin">Product Admin</a>
+      </div>
+   </div>
+<?php include "parts/footer.php" ?>
 
 </body>
 </html>
