@@ -52,7 +52,8 @@ switch(@$_GET['crud']) {
          $_POST['product-description'],
          $_POST['product-quantity'],
          $_POST['product-image_main'],
-         $_POST['product-image_thumb']
+         $_POST['product-image_thumb'],
+         $_GET['id']
       ]);
       header("location:{$_SERVER['PHP_SELF']}?id=$id");
       break;

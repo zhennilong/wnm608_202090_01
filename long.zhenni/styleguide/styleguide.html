@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -358,10 +362,10 @@
                 <h3>Lined Vertical</h3>
                 <script>makeTable('table lined vertical')</script>
             </div>
-            <div class="card soft">
+            <!-- <div class="card soft">
                 <h3>Lined Border</h3>
                 <script>makeTable('tabl e lined border')</script>
-            </div>
+            </div> -->
             <div class="card soft">
                 <h3>Lined Every</h3>
                 <script>makeTable('table lined border vertical horizontal')</script>
@@ -543,10 +547,33 @@
                             <h2>Sleep Bag</h2>
                             <h3>$65.29</h3>
                         </div>
+                        <div class="form-control">
+                     
+                     <label for="product-amount" class="form-label">Amount</label>
+                     <div class="form-select">
+                        <select name="product-amount" id="product-amount">
+                           <!-- option[value=$]*10>{$} -->
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                           <option value="4">4</option>
+                           <option value="5">5</option>
+                           <option value="6">6</option>
+                           <option value="7">7</option>
+                           <option value="8">8</option>
+                           <option value="9">9</option>
+                           <option value="10">10</option>
+                        </select>
+                     </div>
+                  </div>
+
+
                         <div class="product-description">
                             <p>Reiciendis corrupti ipsum harum minus quam, velit nobis ducimus voluptatem temporibus neque dolorum officiis inventore? Optio iure doloremque voluptatibus animi impedit tenetur rerum ipsam. Cupiditate repellendus inventore sit aut odio alias iste, nostrum, molestiae? Accusamus rerum minus sed molestias cum.</p>
                         </div>
-                        <div class="button"></div>
+                        <div class="form-control">
+                     <input type="submit" class="button-action" value="Add To Cart">
+                  </div>
                     </div>
                 </div>
             </div>
@@ -561,7 +588,7 @@
                 </div>
                 <div class="grid gap ">
                     <!-- .col-xs-12.col-md-4*3>.card.soft>{Item $} -->
-                    <div class="col-xs-12 col-md-6 col-lg-3 card soft">
+                    <div class="col-xs-12 col-md-6 col-lg-4 card soft">
                         <div class=" product-card_image">
                             <a href="#">
                                 <div>
@@ -578,7 +605,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-6 col-lg-3 card soft">
+                    <div class="col-xs-12 col-md-6 col-lg-4 card soft">
                         <div class="product-card_image">
                             <a href="#">
                                 <div>
@@ -595,7 +622,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-6 col-lg-3 card soft">
+                    <div class="col-xs-12 col-md-6 col-lg-4 card soft">
                         <div class="product-card_image">
                             <a href="#">
                                 <div>
@@ -612,23 +639,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-6 col-lg-3 card soft">
-                        <div class="product-card_image">
-                            <a href="#">
-                                <div>
-                                    <img src="lib/img/test02.jpg" alt="test image">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="product-card_info">
-                            <h3 class="product-card_info-title">
-                                <a href="#">Baby Shoes</a>
-                            </h3>
-                            <div class="product-card_price">
-                                $39.99
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
