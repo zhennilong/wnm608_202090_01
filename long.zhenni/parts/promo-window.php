@@ -5,7 +5,7 @@ include_once "data/api.php"; ?>
 
 <?php include "parts/meta.php" ?>
 
-<div id="promo-window" >
+<div id="promo-window" class="container" >
         
         <div class="grid display-flex promo">
             <div class="col-xl-6 col-xs-12 article flex-stretch promo-text">
@@ -21,7 +21,7 @@ include_once "data/api.php"; ?>
             </div>
         </div>
 
-         <div class="grid display-flex promo">
+         <div class="grid display-flex promo margin-up-down">
             
             <div class="col-xl-6 col-xs-12 flex-stretch display-flex flex-align-center flex-justify-center">
                     <img src="img/store/toy-bunny-main.jpg" alt="sleeping baby">

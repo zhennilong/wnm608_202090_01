@@ -5,10 +5,10 @@ include_once "parts/templates.php";
 
 $product = MYSQLIQuery("SELECT * FROM products WHERE id = {$_GET['id']}")[0];
 
-$thumbs = explode(",",$product->image_other);
+$thumbs = explode(",",$product->image_thumb);
 
 $thumbs_elements = array_reduce($thumbs,function($r,$o){
-   return $r."<img src='styleguide/lib/$o'>";
+   return $r."<img src='img/store/$o'>";
 });
 
 ?><!DOCTYPE html>
@@ -28,7 +28,7 @@ $thumbs_elements = array_reduce($thumbs,function($r,$o){
          <div class="col-xs-12 col-md-7">
             <div class="card soft">
                <div class="image-main">
-                  <img src="styleguide/lib/<?= $product->image_main ?>" alt="">
+                  <img src="img/store/<?= $product->image_main ?>" alt="">
                </div>
                <div class="image-thumbs">
                   <?= $thumbs_elements ?>
@@ -44,9 +44,9 @@ $thumbs_elements = array_reduce($thumbs,function($r,$o){
                </div>
                <div class="card-section">
 
-                  <div class="nocard">
-         <p><?= $product->description ?></p>
-      </div>
+              <div class="nocard">
+                     <p><?= $product->description ?></p>
+              </div>
                   <div class="form-control">
                      
                      <label for="product-amount" class="form-label">Amount</label>
@@ -85,6 +85,7 @@ $thumbs_elements = array_reduce($thumbs,function($r,$o){
          </div>
       </div>
       
+         <div>
           <h2>Related Products</h2>
 
          <?php

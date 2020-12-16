@@ -14,13 +14,13 @@ $products = makeStatement("products_admin_all",[]);
 
 
 $empty_product = (object)[
-   "name"=>"Jellycat Bunny",
-   "price"=>"10",
-   "category"=>"toy",
-   "description"=>"Such a nice banana.",
-   "quantity"=>"37325",
-   "image_other"=>"toy_bunny01.jpg,toy_bunny02.jpg,toy_bunny03.jpg",
-   "image_thumb"=>"toy_bunny_m.jpg"
+   "name"=>"Let's Get Dressed!",
+   "price"=>"5.55",
+   "category"=>"book",
+   "description"=>"The simple, rhyming text surprises and delights while the hands-on format and Caroline Jayne Church's adorable toddlers makes this a perfect introduction to dressing routines!",
+   "quantity"=>"45",
+   "image_main"=>"book_dressed.jpg",
+   "image_thumb"=>"book_dressed_thumb.jpg"
 ];
 
 
@@ -34,7 +34,7 @@ switch(@$_GET['crud']) {
          $_POST['product-category'],
          $_POST['product-description'],
          $_POST['product-quantity'],
-         $_POST['product-image_other'],
+         $_POST['product-image_main'],
          $_POST['product-image_thumb'],
          $_GET['id']
       ]);
@@ -51,7 +51,7 @@ switch(@$_GET['crud']) {
          $_POST['product-category'],
          $_POST['product-description'],
          $_POST['product-quantity'],
-         $_POST['product-image_other'],
+         $_POST['product-image_main'],
          $_POST['product-image_thumb']
       ]);
       header("location:{$_SERVER['PHP_SELF']}?id=$id");
@@ -76,7 +76,7 @@ function showProductPage($product) {
 
 $id = $_GET['id'];
 
-$thumbs = explode(",",$product->image_other);
+$thumbs = explode(",",$product->image_thumb);
 
 $thumbs_elements = array_reduce($thumbs,function($r,$o){
    return $r."<img src='img/store/$o'>";
@@ -94,7 +94,7 @@ $productdata = $id=='new' ? '' : <<<HTML
       <h2 class="flex-stretch">$product->name</h2>
       <div>
          <a href="{$_SERVER['PHP_SELF']}?id=$id&crud=delete">
-            <img src="img/icons/trash.svg" class="icon">
+            <img src="img/icon/trash.svg" class="icon">
          </a>
       </div>
    </div>
@@ -116,7 +116,7 @@ $productdata = $id=='new' ? '' : <<<HTML
    </div>
    <div>
       <strong>Images</strong>
-      <div class="image-thumbs"><img src='img/store/$product->image_thumb'></div>
+      <div class="image-thumbs"><img src='img/store/$product->image_main'></div>
       <div class="image-thumbs">$thumbs_elements</div>
    </div>
 </div>
@@ -157,12 +157,12 @@ echo <<<HTML
                <textarea id="product-description" name="product-description" placeholder="Type product description" class="form-input">$product->description</textarea>
             </div>
             <div class="form-control">
-               <label for="product-image_thumb" class="form-label">Image Thumb</label>
-               <input id="product-image_thumb" name="product-image_thumb" type="text" placeholder="Type product image thumb" class="form-input" value="$product->image_thumb">
+               <label for="product-image_thumb" class="form-label">Image Main</label>
+               <input id="product-image_thumb" name="product-image_thumb" type="text" placeholder="Type product image main" class="form-input" value="$product->image_main">
             </div>
             <div class="form-control">
-               <label for="product-image_other" class="form-label">Image Others</label>
-               <input id="product-image_other" name="product-image_other" type="text" placeholder="Type product image other" class="form-input" value="$product->image_other">
+               <label for="product-image_thumb" class="form-label">Image Thumb</label>
+               <input id="product-image_thumb" name="product-image_thumb" type="text" placeholder="Type product image thumb" class="form-input" value="$product->image_thumb">
             </div>
             <div class="form-control">
                <input class="form-button" type="submit" value="Save">
@@ -223,7 +223,7 @@ HTML;
          } else {
 
          ?>
-         <div class="card medium soft">
+         <div class="card  soft">
          <h2>Product List</h2>
 
          <div>

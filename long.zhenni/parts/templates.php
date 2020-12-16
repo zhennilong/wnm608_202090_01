@@ -10,7 +10,7 @@ return $r.<<<HTML
    <a href="product_item.php?id=$o->id" class="product-item">
       <figure>
          <div class="product-image">
-            <img src="img/store/$o->image_thumb" alt="">
+            <img src="img/store/$o->image_main" alt="">
          </div>
          <figcaption class="product-card_info">
             <h3 class="product-card_info-title">$o->name</h3>
@@ -41,11 +41,11 @@ function makeCartList($r,$o) {
 $totalfixed = number_format($o->total,2,'.','');
 $selectamount = selectAmount($o->amount,10);
 return $r.<<<HTML
-<div class="display-flex position-relative">
+<div class="display-flex position-relative bottom-line">
    <div class="flex-none image-thumbs">
-      <img src="img/store/$o->image_thumb">
+      <img src="img/store/$o->image_main">
    </div>
-   <div class="flex-stretch">
+   <div class="flex-stretch margin-auto">
       <strong>$o->name</strong>
       
    </div>
@@ -99,12 +99,41 @@ HTML;
 }
 
 
+function checkTotals() {
+
+$cart = getCartItems();
+
+$cartprice = array_reduce($cart,function($r,$o){return $r+$o->total;},0);
+
+$pricefixed = number_format($cartprice,2,'.','');
+$tax = number_format($cartprice*0.0725,2,'.','');
+$taxed = number_format($cartprice*1.0725,2,'.','');
+
+return <<<HTML
+<div class="card-section display-flex">
+   <div class="flex-stretch  info-left"><strong>Sub Total</strong></div>
+   <div class="flex-none">&dollar;$cartprice</div>
+</div>
+<div class="card-section display-flex">
+   <div class="flex-stretch info-left"><strong>Taxes</strong></div>
+   <div class="flex-none">&dollar;$tax</div>
+</div>
+<div class="card-section display-flex">
+   <div class="flex-stretch  info-left"><strong>Total</strong></div>
+   <div class="flex-none">&dollar;$taxed</div>
+</div>
+<div class="card-section margin-up-bottom">
+   <a href="product_confirmation.php" class="button-action">Pay</a>
+</div>
+HTML;
+}
+
 
 function makeAdminList($r,$o) {
 return $r.<<<HTML
 <div class="display-flex card flat soft">
    <div class="flex-none image-thumbs">
-      <img src="img/store/$o->image_thumb">
+      <img src="img/store/$o->image_main">
    </div>
    <div class="flex-stretch" style="padding:1em">
       <div><strong>$o->name</strong></div>
@@ -143,6 +172,7 @@ function recommendSimilar($cat,$id=0,$limit=3) {
       ");
    makeRecommend($result);
 }
+
 function recommendCategory($cat,$limit=3) {
    $result = MYSQLIQuery("
          SELECT *

@@ -28,10 +28,8 @@ body {
    font-size:100%;
    font-family: 'Nunito', sans-serif;
    font-weight: 400;
-
+   min-width: 400px;
 }
-  
-
 
 h4,
 h5,
@@ -43,7 +41,9 @@ h6 {
 h1,
 h2,
 h3 {font-family:'Ubuntu', sans-serif;
-   color: var(--color-blue);}
+   color: var(--color-blue);
+   height: 2em;
+ }
 
 
 
@@ -75,6 +75,14 @@ code {
    margin-left: auto;
        margin-top: 2em;
 }
+
+.container-left {
+   max-width: 1200px;
+   margin-right: auto;
+   margin-left: auto;
+       margin-top: 2em;
+}
+
 .hidden { display:none; }
 
 
@@ -96,6 +104,7 @@ code {
 
 /* Component Classes */
 .nav ul {
+   width:100%;
    list-style-type:none;
    margin-top:0;
    margin-bottom:0;
@@ -145,7 +154,7 @@ code {
    }
 .nav.crumbs li:not(:first-child)::before {
       content:'→';
-      font-family:arial;
+      font-family:'Nunito', sans-serif;
    }
 
 .navbar {
@@ -166,8 +175,8 @@ code {
 }
 
 .nav-category {
-  margin: 0 40px;
-    min-width: 60px;
+  min-width: 60px;
+  list-style-type: none;
 }
 
 .view-window {
@@ -194,7 +203,7 @@ code {
 
 .promo {
   background-color: var(--color-neutral-light);
- padding: 0 10em 0 10em;}
+ /*padding: 0 10em 0 10em;*/}
 
 .promo-text {
       text-align: center;
@@ -205,24 +214,6 @@ code {
 
 
 
-   .product-card_image {
-    border-radius: 10%;
-    width: 100%;
-    /*min-height: 250px;
-    width: 250px;*/
-    /* padding: 5em; */
-    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
-    /* border: solid 0.01rem #C2CFE1; */
-   }
-
-.product-card_info-title {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-   .product-card_info {
-    text-align: center;
-}
 
 img {
       vertical-align: middle;
@@ -272,6 +263,13 @@ img {
 
 }
 
+.well.color {
+    padding: 0.5em;
+    background-color: var(--color-neutral-light);
+    margin: 1px;
+
+}
+
 
    .well .center{
     padding: 0.5em;
@@ -286,6 +284,8 @@ img {
     /*background-color: var(--color-neutral-light);*/
     margin: 1px;
 }
+
+
 
 .well .well {
     background-color: var(--color-neutral-light);
@@ -306,7 +306,7 @@ img {
 .button-regular {
     background-color: var(--color-blue);
     border-radius: 50px;
-    padding: 10px 80px;
+    padding: 10px 30px;
     color: var(--color-white);
     cursor: pointer;
     margin: 10px;
@@ -316,11 +316,12 @@ img {
 .button-action {
     background-color: var(--color-orange);
     border-radius: 50px;
-    padding: 10px 80px;
+    padding: 10px 30px;
     color: var(--color-white);
     cursor: pointer;
     margin: 10px;
     font-size: 1em;
+    border-width: 0px;
 }
 
 .button {
@@ -528,7 +529,7 @@ img {
 
 
 
-.form-select-sort>select {
+/*.form-select-sort>select {
     padding: 0.5em 1em;
     background-color: var(--color-neutral-light);
     border-width: 0;
@@ -540,7 +541,7 @@ img {
     font:inherit;
     outline:0;
     box-shadow: 0.5px 0.5px 2px rgba(0,0,0,0.2);
-}
+}*/
 
 .form-select>select {
     padding: 0.5em 1em;
@@ -560,12 +561,12 @@ img {
 }
 .form-select::after {
     position: absolute;
-    content: '▼';
-    font-family: Arial,sans-serif;
+    content:'▼';
+    font-family: 'Nunito', sans-serif;
     font-size: 0.9em;
     top: 50%;
     transform: translateY(-50%);
-    right: 10em;
+    right: 12em;
     pointer-events: none;
     color: var(--color-neutral-dark);
 }
@@ -595,18 +596,48 @@ img {
 .form-select-full::after {
     position: absolute;
     content: '▼';
-    font-family: Arial,sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.9em;
     /* top: 50%; */
-    bottom: 45%;
+    bottom: 55%;
     transform: translateY(-50%);
-    right: 1rem;
+    right: 0.5rem;
     pointer-events: none;
     color: var(--color-neutral-dark);
 }
 
 
+.form-select-sort>select {
+  height: 3em;
+    padding: 0.5em 2em;
+    margin-top: 1em;
+    /* background-color: var(--color-neutral-light); */
+    border-width: 0;
+    border-radius: 3em;
+    cursor: pointer;
+    -webkit-appearance: none;
+    display: inline-block;
+    width: 100%;
+    font: inherit;
+    outline: 0;
+    border: 0.5px solid rgba(0,0,0,0.5);
+}
 
+.form-select-sort {
+   position: relative;
+}
+
+
+.form-select-sort::after {
+   position: absolute;
+    content: '▼';
+    font-family: 'Nunito', sans-serif;
+    top: 65%;
+    transform: translateY(-50%);
+    right: 0.8rem;
+    pointer-events: none;
+    color: var(--color-neutral-dark);
+}
 
 
 
@@ -742,4 +773,37 @@ img {
 
 .card-section.margin-up-bottom {
     margin: 2em;
+}
+
+
+
+.card-transparent {
+      padding: 1em;
+    margin: 1em;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.display-block.max-width-500 {
+  max-width: 500px;
+  margin: auto;
+}
+
+.margin-up-down {
+    margin: 5em auto;
+}
+
+.max-width-500 {
+  max-width: 500px;
+  margin: auto;
+
+}
+
+.min-height {
+  min-height: 200px;
+}
+
+.margin-auto {
+  margin:auto;
 }

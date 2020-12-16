@@ -18,17 +18,19 @@ $cart_product = cartItemById($_GET['id']);
 
    <div class="container">
       <div class="card soft">
-         <h2>Added <?= $product->name ?> To Cart</h2>
+         <div class="display-block min-height">
+               <h2>Added <?= $product->name ?> To Cart</h2>
 
-         <p>There are now <?= $cart_product->amount ?> of <?= $product->name ?> in your cart.</p>
+               <p>There are now <?= $cart_product->amount ?> of <strong><?= $product->name ?></strong> in your cart.</p>
+         </div>
 
-         <div class="display-flex">
+         <div class="display-flex margin-up-down">
             <div class="flex-none">
-               <a href="product_list.php" class="form-button">Back to shopping</a>
+               <a href="product_list.php" class="button-regular">Back to shopping</a>
             </div>
             <div class="flex-stretch"></div>
             <div class="flex-none">
-               <a href="product_cart.php" class="form-button">Check Cart</a>
+               <a href="product_cart.php" class="button-action">Check Cart</a>
             </div>
          </div>
          

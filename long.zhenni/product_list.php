@@ -84,7 +84,7 @@ $products = isset($result['error']) ? [] : $result;
                ]);
                ?>
 
-               <input type="submit" value="Toy" class="form-button">
+               <input type="submit" value="Toys" class="form-button">
             </form>
             <form class="gaps" action="product_list.php" method="get">
                <?
@@ -96,11 +96,27 @@ $products = isset($result['error']) ? [] : $result;
 
                <input type="submit" value="Skin Care" class="form-button">
             </form>
+            <form class="gaps" action="product_list.php" method="get">
+               <?
+               makeHiddenValues($_GET,[
+                  "category"=>"book",
+                  "t"=>"products_by_category"
+               ]);
+               ?>
+
+               <input type="submit" value="Books" class="form-button">
+            </form>
          </div>
+         <div class="flex-stretch"></div>
+         
+      </div>
+
+       <div class="display-flex" style="margin:1em 0">
+         
          <div class="flex-stretch"></div>
          <div class="flex-none">
             
-            <form action="product_list.php" method="get">
+            <form class="gaps" action="product_list.php" method="get">
 
                <?
                makeHiddenValues($_GET,[]);

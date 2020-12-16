@@ -27,9 +27,11 @@ include_once "lib/php/functions.php";
 
     <div class="container">
 
-        <div class="display-inline-flex flex-stretch">
+        <div class="display-flex" style="justify-content: space-between;">
             <h2>Product Checkout</h2>
-            <a href="product_cart.php">Cancel</a>
+            <a href="product_cart.php" style="
+    margin: 20px;
+    line-height: 2em;">Cancel</a>
         </div>
 
         <div class="grid gap large">
@@ -111,27 +113,27 @@ include_once "lib/php/functions.php";
 
             <div class="order_summary fill_in-info col-xs-12 col-md-4">
                 <h2>Order Summary</h2>
-                <div class="card soft">
+                <div class="card-transparent">
                     
                     <?
 
                echo array_reduce($cart,'makeCartList');
 
                ?>
-                </div>
+                
                
                     <div class="card-section">
-                        <h2>Totals</h2>
+                        <!-- <h2>Totals</h2> -->
                     </div>
-                    <?= cartTotals() ?>
-               
+                    <?= checkTotals() ?>
+               </div>
             </div>
             
         </div>
 
-        <div class="button">
+       <!--  <div class="button">
             <a class="button-action" href="product_actions.php?action=reset-cart">Pay</a>
-        </div>
+        </div> -->
     </div>
 
 </body>
