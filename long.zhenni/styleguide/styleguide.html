@@ -42,6 +42,7 @@
                 <li><a href="#forms">Forms</a></li>
                 <li><a href="#buttons">Buttons</a></li>
                 <li><a href="#products">Products</a></li>
+                <li><a href="#Footer">Footer</a></li>
             </ul>
         </div>
     </nav>
@@ -98,50 +99,50 @@
             <div class="grid">
                 <!-- div.col-6>{Column 6} -->
                 <div class="col-6">
-                    <div class="well">Column 6</div>
+                    <div class="well-dark">Column 6</div>
                 </div>
                 <div class="col-6">
-                    <div class="well">Column 6</div>
+                    <div class="well-dark">Column 6</div>
                 </div>
             </div>
             <div class="grid">
                 <div class="col-4">
-                    <div class="well">Column 4</div>
+                    <div class="well-dark">Column 4</div>
                 </div>
                 <div class="col-4">
-                    <div class="well">Column 4</div>
+                    <div class="well-dark">Column 4</div>
                 </div>
                 <div class="col-4">
-                    <div class="well">Column 4</div>
+                    <div class="well-dark">Column 4</div>
                 </div>
             </div>
             <div class="grid">
                 <div class="col-3">
-                    <div class="well">Column 3</div>
+                    <div class="well-dark">Column 3</div>
                 </div>
                 <div class="col-3">
-                    <div class="well">Column 3</div>
+                    <div class="well-dark">Column 3</div>
                 </div>
                 <div class="col-3">
-                    <div class="well">Column 3</div>
+                    <div class="well-dark">Column 3</div>
                 </div>
                 <div class="col-3">
-                    <div class="well">Column 3</div>
+                    <div class="well-dark">Column 3</div>
                 </div>
             </div>
             <!-- Make sure numbers always add to 12 -->
             <div class="grid">
                 <div class="col-3">
-                    <div class="well">Column 3</div>
+                    <div class="well-dark">Column 3</div>
                 </div>
                 <div class="col-6">
-                    <div class="well">Column 6</div>
+                    <div class="well-dark">Column 6</div>
                 </div>
                 <div class="col-3">
-                    <div class="well">Column 3</div>
+                    <div class="well-dark">Column 3</div>
                 </div>
                 <div class="col-12">
-                    <div class="well">Column 12</div>
+                    <div class="well-dark">Column 12</div>
                 </div>
             </div>
         </div>
@@ -189,25 +190,25 @@
             </div>
             <div class="grid">
                 <div class="col-xs-12 col-md-6">
-                    <div class="well  color center">Col 6</div>
+                    <div class="well-dark  color center">Col 6</div>
                 </div>
                 <div class="col-xs-12 col-md-6">
-                    <div class="well color center">Col 6</div>
+                    <div class="well-dark color center">Col 6</div>
                 </div>
             </div>
             <hr>
             <div class="grid gap">
                 <div class="col-xs-6 col-md-3">
-                    <div class="well color center">Col 6</div>
+                    <div class="well-dark color center">Col 6</div>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <div class="well  color center">Col 6</div>
+                    <div class="well-dark  color center">Col 6</div>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <div class="well  color center">Col 6</div>
+                    <div class="well-dark  color center">Col 6</div>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <div class="well  color center">Col 6</div>
+                    <div class="well-dark  color center">Col 6</div>
                 </div>
             </div>
             <hr>
@@ -251,18 +252,27 @@
         <h2>View Window</h2>
         <div class="view-window" style="background-image:url(lib/img/test.jpg)"></div>
     </div>
-    <div id="promo-window" class="container-left ">
-        <h2>Promo window</h2>
-        <div class="card soft display-flex promo">
-            <div class="article flex-stretch promo-text" style="width:50%">
-                <div class="promo-text" style="width:60%">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe iste quae quod mollitia quaerat sunt</div>
+    
+
+<div id="promo-window" class="container" >
+  <h2>Promo window</h2>
+<div class="grid display-flex promo">
+            <div class="col-xl-6 col-xs-12 article flex-stretch promo-text">
+                <div class="promo-text gaps" >
+                    <h2>the science of soft</h2>
+                     <p>we craft the softest organic fabrics for a gentle calming effect
+
+                     </p>
+                </div>
             </div>
-            <div class="flex-stretch display-flex flex-align-center flex-justify-center" style="width:50%">
-                <img src="lib/img/test.jpg" alt="test img">
+            <div class="col-xl-6 col-xs-12 flex-stretch display-flex flex-align-center flex-justify-center">
+                    <img src="../img/store/toy-bear-other.jpg" alt="sleeping baby">
             </div>
         </div>
-    </div>
+      </div>
+
+
+    
     <div class="container-left" id="navigations">
         <h2>Navigations</h2>
         <script>
@@ -297,7 +307,7 @@
                <li><a href="#">Link 4</a></li>
             </ul>
          </nav> -->
-                <div class="grid">
+                <div class="grid gap">
                     <div class="col-xs-4">
                         <script>makeNav('nav')</script>
                     </div>
@@ -414,20 +424,36 @@
                         </div>
                     </div>
                 </form>
+                
+
+                    <h3>Form with bordered box</h3>
+                    <div class="grid gap large">
+
+                        <div class="col-xs-12 col-md-6">
+                            <form>
+                                <input type="text" placeholder="First Name" class="form-input-box">
+                            </form>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <form>
+                                <input type="text" placeholder="Last Name" class="form-input-box">
+                            </form>
+                        </div>
+                    </div>
+
+
                 <h3>Buttons</h3>
                 <div id="buttons" class="button" style=" margin: 2em;">
-                    <a class="button-regular" href="#">ADD TO CART</a>
+                    <a class="button-regular" href="#">Regular Button</a>
                 </div>
-                <div class="button style="
-    margin: 2em;
-"">
-                    <a class="button-action" href="#">Checkout</a>
+                <div class="button" style=" margin: 2em;">
+                    <a class="button-action" href="#">Call to Action</a>
                 </div>
-                <div class="button style="
+                <!-- <div class="button style="
     margin: 2em;
 "">
                     <a class="square-button" href="#">- 1 +</a>
-                </div>
+                </div> -->
                 <!--
          <div class="form-control">
             <button type="button" class="form-button">Button</button>
@@ -470,19 +496,22 @@
                     </div>
                 </form>
                 <h3>Select</h3>
-                <div class="grid">
+                <div class="grid gap">
                     <div class="col-xs-12 col-md-8">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fugiat delectus aliquid, voluptatum et, molestias deleniti ad asperiores. Laborum, adipisci. Libero tempora quaerat et quam iusto veritatis, aspernatur aliquid fuga obcaecati enim, nobis quod quidem voluptatibus. Omnis vel sed repellat.</p>
                         <p>Pariatur sit officia incidunt, officiis, dicta nemo debitis rerum asperiores ratione accusantium fugit dolorum. Dolores saepe ducimus dolorum sed rerum molestiae ipsam delectus quae nihil quibusdam. Vel praesentium, magnam id dignissimos necessitatibus repellendus ullam mollitia vitae iusto illo doloremque culpa!</p>
                     </div>
                     <div class="col-xs-12 col-md-4">
-                        <div class="form-select">
+                        <div class="form-select-sort">
                             <select>
                                 <option>Option 1</option>
                                 <option>Option 2</option>
                                 <option>Option 3</option>
                             </select>
                         </div>
+                        <div class="form-control">
+
+                  </div>
                     </div>
                 </div>
                 <h3>Checkbox</h3>
@@ -534,20 +563,36 @@
                <p>Reiciendis corrupti ipsum harum minus quam, velit nobis ducimus voluptatem temporibus neque dolorum officiis inventore? Optio iure doloremque voluptatibus animi impedit tenetur rerum ipsam. Cupiditate repellendus inventore sit aut odio alias iste, nostrum, molestiae? Accusamus rerum minus sed molestias cum.</p>
             </div>
          </div>-->
-            <h3>Product Detail</h3>
-            <div class="grid gap">
-                <div class="col-xs-12 col-md-6 ">
-                    <div class="product-card_image">
-                        <img src="lib/img/test03.jpg" alt="sleep bag">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-6 ">
-                    <div class="product-card_info">
-                        <div class="product-title">
-                            <h2>Sleep Bag</h2>
-                            <h3>$65.29</h3>
-                        </div>
-                        <div class="form-control">
+
+
+
+   <div class="container">
+     <h3>Product Detail</h3>
+      <div class="grid gap">
+         <div class="col-xs-12 col-md-7">
+            <div class="card soft">
+               <div class="image-main">
+                  <img src="../img/store/toy_bunny_thumb.jpg" alt="">
+               </div>
+               <div class="image-thumbs">
+                  <img src="../img/store/toy_bunny_thumb.jpg" alt="">
+               </div>
+               
+            </div>
+         </div>
+         <div class="col-xs-12 col-md-5">
+            <form class="card soft flat" method="post" action="product_actions.php?action=add-to-cart">
+               <input type="hidden" name="product-id" value="<?= $product->id ?>">
+               <div class="card-section">
+                  <h2>Wood Bunny</h2>
+                  <div>$15.99</div>
+               </div>
+               <div class="card-section">
+
+              <div class="nocard">
+                     <p>It's an interesting toy for baby!</p>
+              </div>
+                  <div class="form-control">
                      
                      <label for="product-amount" class="form-label">Amount</label>
                      <div class="form-select">
@@ -566,18 +611,20 @@
                         </select>
                      </div>
                   </div>
-
-
-                        <div class="product-description">
-                            <p>Reiciendis corrupti ipsum harum minus quam, velit nobis ducimus voluptatem temporibus neque dolorum officiis inventore? Optio iure doloremque voluptatibus animi impedit tenetur rerum ipsam. Cupiditate repellendus inventore sit aut odio alias iste, nostrum, molestiae? Accusamus rerum minus sed molestias cum.</p>
-                        </div>
-                        <div class="form-control">
+                  
+                  <div class="form-control">
                      <input type="submit" class="button-action" value="Add To Cart">
                   </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-left">
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+
+
+
+
+            
                 <!--<div class="card soft">
          <div>
             <h3>Layout</h3>
@@ -586,13 +633,23 @@
                 <div>
                     <h3>Product List</h3>
                 </div>
+ <form action="product_list.php" method="get" class="hotdog stack">
+
+         <input type="search" name="s" placeholder="Search"
+         value="Search bar">
+
+         
+
+         <button type="submit">Search</button>
+      </form>
+
                 <div class="grid gap ">
                     <!-- .col-xs-12.col-md-4*3>.card.soft>{Item $} -->
                     <div class="col-xs-12 col-md-6 col-lg-4 card soft">
                         <div class=" product-card_image">
                             <a href="#">
                                 <div>
-                                    <img src="lib/img/test02.jpg" alt="test image">
+                                    <img src="../img/store/toy_bunny.jpg" alt="test image">
                                 </div>
                             </a>
                         </div>
@@ -609,7 +666,7 @@
                         <div class="product-card_image">
                             <a href="#">
                                 <div>
-                                    <img src="lib/img/test02.jpg" alt="test image">
+                                    <img src="../img/store/toy_dragon_thumb.jpg" alt="test image">
                                 </div>
                             </a>
                         </div>
@@ -626,7 +683,7 @@
                         <div class="product-card_image">
                             <a href="#">
                                 <div>
-                                    <img src="lib/img/test02.jpg" alt="test image">
+                                    <img src="../img/store/toy_dragon.jpg" alt="test image">
                                 </div>
                             </a>
                         </div>
@@ -645,6 +702,64 @@
         </div>
     </div>
 
+<div id="Footer">
+  <h2>Footer</h2>
+  <footer class="footer-margin background-blue">
+  
+         <div class="grid footer-padding" >
+            <div class="col-md-4 col-xs-12">
+                <div class="footer">
+                    <ul>
+                        <li>About Us</li>
+                        <li>FAQ</li>
+                        
+                    </ul>
+                </div>
+            </div>  
+
+            <div class="col-md-4 col-xs-12">
+                <div class="footer ">
+                        <ul>
+                            <li>Shipping & Return</li>
+                            <li>Refer a Friend</li>
+                            
+                        </ul>
+                </div>
+            </div>
+            
+      
+            <div class="col-md-4 col-xs-12">
+                <div class="footer ">
+                    <ul>
+                        <li>Privacy Poilicy</li>
+                        <li>Terms & Conditions</li>
+                    </ul>
+                </div>
+            </div>
+
+
+     
+          <!--   <div class="col-md-6 col-xs-12">
+                <div class="footer">
+                    
+                    <div>Join our newsletter to receive 10% off your first order!</div>
+
+                    <form>
+                        <div >
+                            
+                            <input id="example-1" type="text" placeholder="Your Email Address" class="form-input-box-white">
+                        </div>
+                    </form>
+                   
+               </div>
+                
+            </div> -->
+         </div>
+ 
+  
+
+</footer>
+</div>
 
 
 </body>

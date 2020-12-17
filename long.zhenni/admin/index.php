@@ -14,10 +14,10 @@ $products = makeStatement("products_admin_all",[]);
 
 
 $empty_product = (object)[
-   "name"=>"Let's Get Dressed!",
+   "name"=>"Lets Get Dressed",
    "price"=>"5.55",
    "category"=>"book",
-   "description"=>"The simple, rhyming text surprises and delights while the hands-on format and Caroline Jayne Church's adorable toddlers makes this a perfect introduction to dressing routines!",
+   "description"=>"The simple, rhyming text surprises and delights while the hands-on format and Caroline Jayne Churchs adorable toddlers makes this a perfect introduction to dressing routines.",
    "quantity"=>"45",
    "image_main"=>"book_dressed.jpg",
    "image_thumb"=>"book_dressed_thumb.jpg"
@@ -158,8 +158,8 @@ echo <<<HTML
                <textarea id="product-description" name="product-description" placeholder="Type product description" class="form-input">$product->description</textarea>
             </div>
             <div class="form-control">
-               <label for="product-image_thumb" class="form-label">Image Main</label>
-               <input id="product-image_thumb" name="product-image_thumb" type="text" placeholder="Type product image main" class="form-input" value="$product->image_main">
+               <label for="product-image_main" class="form-label">Image Main</label>
+               <input id="product-image_main" name="product-image_main" type="text" placeholder="Type product image main" class="form-input" value="$product->image_main">
             </div>
             <div class="form-control">
                <label for="product-image_thumb" class="form-label">Image Thumb</label>
